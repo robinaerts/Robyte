@@ -1,10 +1,6 @@
-import { useEffect } from "react";
-import { Canvas } from "react-three-fiber";
-
 export default function Landing() {
   return (
     <div id="landing-container">
-      {/* <Canvas></Canvas> */}
       <div id="landing-text">
         <h1 className="landing-robyte">
           R<span className="yellow-text">0</span>B
