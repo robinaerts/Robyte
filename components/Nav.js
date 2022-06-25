@@ -1,19 +1,31 @@
+import Link from "next/link";
 import { useState } from "react";
+import { auth } from "../config/firebaseconfig";
 
 export default function Nav() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [user, setUser] = useState(auth.currentUser);
+
+  const logout = () => {
+    auth.signOut();
+    setUser();
+  };
+
   return (
     <ul id="nav-container">
       <li className="dark-mode"></li>
       <li className="nav-github"></li>
-      {!isLoggedIn && (
+      {!user && (
         <li>
-          <button className="nav-login">LOGIN</button>
+          <Link href="/login">
+            <button id="nav-login">LOGIN</button>
+          </Link>
         </li>
       )}
-      {isLoggedIn && (
+      {user && (
         <li>
-          <button className="nav-logout">LOGOUT</button>
+          <button onClick={logout} id="nav-logout">
+            LOGOUT
+          </button>
         </li>
       )}
     </ul>

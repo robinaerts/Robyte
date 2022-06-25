@@ -2,8 +2,9 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family:  "montserrat", Arial, Helvetica, sans-serif;
   background: #242424;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -14,15 +15,17 @@ a {
 * {
   box-sizing: border-box;
   overflow-x: hidden;
+  font-family:  "montserrat", Arial, Helvetica, sans-serif;
 }
 
+/* LANDING */
 #landing-container {
   margin-left: 8vw;
   width: 92vw;
-height: 100vh;
-display: flex;
-flex-direction: column;
-justify-content: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .landing-robyte {
@@ -62,6 +65,32 @@ justify-content: center;
   margin-right: 2rem;
 }
 
+#scroll-icon {
+  position: absolute;
+  left: 47%;
+  top: 86%;
+  fill: rgb(152, 152, 152);
+  width: 40px;
+}
+
+circle {
+  animation: scroll 3s ease infinite;
+}
+
+@keyframes scroll {
+  0% { 
+    opacity: 0;
+    cy: 481;
+  }
+  33% {
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+    cy: 231;
+  }
+}
+
 /* NAVBAR */
 #nav-container {
   position: absolute;
@@ -74,7 +103,7 @@ justify-content: center;
   margin-right: 3rem;
 }
 
-.nav-login {
+#nav-login {
   margin: 1rem 2rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
@@ -85,8 +114,20 @@ justify-content: center;
   background-color: #EDCA66;
 }
 
-.nav-login:hover {
+#nav-login:hover, #nav-logout:hover {
   cursor: pointer;
+}
+
+#nav-logout {
+  margin: 1rem 2rem;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  outline: none;
+  border: 2px solid #EDCA66;
+  color: #EDCA66;
+  border-radius: 30px;
+  padding: 0.8rem 1.3rem;
+  background-color: inherit;
 }
 
 /* PROGRAMMING */
@@ -233,4 +274,99 @@ background: #EFBA13;
 border-top-right-radius: 17px;
 border-bottom-left-radius: 17px;
 margin-left: -5rem;
+}
+
+/* LOGIN */
+#login-page-container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#login-page-right {
+  /* flex: 2; */
+  height: 70vh;
+  min-width: 30vw;
+  border-radius: 15px;
+  background-color: #3C3C3C;
+}
+
+#login-page-left {
+  /* flex: 1; */
+}
+
+#email-login {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 5rem;
+}
+
+.login-input {
+  border-radius: 30px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  height: 2.6rem;
+  padding: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.login-label {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  margin-bottom: 0.8rem;
+}
+
+#login-submit-button, #signup-submit-button {
+  text-align: center;
+  width: 40%;
+  font-size: 1.1rem;
+  background: #EFBA13;
+  border: none;
+  outline: none;
+  border-radius: 15px;
+  font-weight: bold;
+  padding: 0.7rem 1.3rem ;
+}
+
+#login-submit-button:hover {
+  cursor: pointer;
+  background: #e0b013;
+}
+
+#signup-submit-button {
+  margin-left: 6rem;
+  background: none;
+  color: #EFBA13;
+  border: 1px solid #efba13;
+}
+
+#signup-submit-button:hover {
+  cursor: pointer;
+  border: 1px solid #bd9615;
+  color: #bd9615;
+}
+
+#provider-logins {
+  margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* PROJECT DETAILS */
+
+#backdrop {
+  background: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  overflow-y: hidden;
 }

@@ -11,16 +11,38 @@ export default function Landing() {
         </p>
       </div>
       <ul id="nav-badges">
-        <li className="nav-badge" style={{ backgroundColor: "#8CA3BF" }}>
+        <a
+          href="#programming-container"
+          className="nav-badge"
+          style={{ backgroundColor: "#8CA3BF" }}
+        >
           DEV
-        </li>
-        <li className="nav-badge" style={{ backgroundColor: "#97C490" }}>
+        </a>
+        <a
+          href="#art-container"
+          className="nav-badge"
+          style={{ backgroundColor: "#97C490" }}
+        >
           ART
-        </li>
-        <li className="nav-badge" style={{ backgroundColor: "#EFBA13" }}>
+        </a>
+        <a className="nav-badge" style={{ backgroundColor: "#EFBA13" }}>
           ABOUT
-        </li>
+        </a>
       </ul>
+      <svg
+        id="scroll-icon"
+        version="1.1"
+        width="80px"
+        height="80px"
+        viewBox="30.5 -9.5 554 813"
+      >
+        <path
+          d="M328,0h-44C271.68,0,42,5.28,42,242v308c0,9.9,3.96,242,242,242h44c13.86,0,242-6.16,242-242V242C570,232.1,566.04,0,328,0z
+               M526,550c0,191.62-177.76,198-198,198h-44C92.38,748,86,570.24,86,550V242C86,50.82,263.54,44,284,44h44
+               c191.62,0,198,177.76,198,198V550z"
+        />
+        <circle cx="306" cy="231" r="45" />
+      </svg>
     </div>
   );
 }
