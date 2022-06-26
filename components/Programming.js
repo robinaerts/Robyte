@@ -65,10 +65,6 @@ export default function Programming() {
             />
           );
         })}
-        {/*         
-        <ProgrammingProject setEnlarge={setEnlarge} />
-        <ProgrammingProject setEnlarge={setEnlarge} />
-        <ProgrammingProject setEnlarge={setEnlarge} /> */}
       </div>
       {enlarge !== undefined && (
         <>
