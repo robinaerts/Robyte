@@ -38,11 +38,12 @@ export default function Programming() {
       {enlarge && (
         <>
           <div
-            onClick={() => setEnlarge()}
+            // onClick={() => setEnlarge()}
             style={{ top: window.scrollY + "px" }}
             id="backdrop"
-          ></div>
-          <ProjectDetail id={enlarge} />
+          >
+            <ProjectDetail setEnlarge={setEnlarge} id={enlarge} />
+          </div>
         </>
       )}
     </div>

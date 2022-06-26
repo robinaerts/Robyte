@@ -286,15 +286,10 @@ margin-left: -5rem;
 }
 
 #login-page-right {
-  /* flex: 2; */
   height: 70vh;
   min-width: 30vw;
   border-radius: 15px;
   background-color: #3C3C3C;
-}
-
-#login-page-left {
-  /* flex: 1; */
 }
 
 #email-login {
@@ -369,4 +364,121 @@ margin-left: -5rem;
   position: absolute;
   left: 0;
   overflow-y: hidden;
+}
+
+#project-container {
+  justify-self: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  display: flex;
+  background-color: #2A2A2A;
+  width: 80%;
+  height: 80%;
+}
+
+#project-preview {
+  width: 50%;
+  height: 100%;
+  background-color: #151515;
+}
+
+#project-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  margin-top: 1.2rem;
+}
+
+#project-details-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.badge {
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+}
+
+#project-details-description {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  font-weight: normal;
+}
+
+#external-link-button {
+  width: 20px;
+}
+
+#visit-button {
+  color: #2A2A2A;
+  background-color: #80C0E6;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  margin-top: 3rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+}
+
+#visit-button:hover {
+  cursor: pointer;
+  background-color: #72a5c2;
+}
+
+#visit-button-text {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  display: inline;
+}
+
+#close-details {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#close-details:hover {
+  cursor: pointer;
+}
+
+#project-details-comments {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#comments-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+#comment-container {
+  display: flex;
+  align-items: center;
+  margin-left: 6rem;
+}
+
+.comment-profile-image {
+  margin-right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #515151;
+}
+
+.comment-name {
+  font-weight: bold;
+  text-align: left;
+}
+
+.comment-content {
+  margin-top: -10px;
 }
