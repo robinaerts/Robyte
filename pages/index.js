@@ -1,6 +1,6 @@
 import Art from "../components/Art";
 import Footer from "../components/Footer";
-import Landing from "../Components/Landing";
+import Landing from "../components/Landing";
 import Nav from "../components/Nav";
 import Programming from "../components/Programming";
 import { collection, getDocs, query } from "firebase/firestore";
