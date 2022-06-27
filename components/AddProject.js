@@ -147,7 +147,7 @@ export default function AddProject(props) {
                 transform="translate(1.414 1.414)"
                 fill="none"
                 stroke="#eaeaea"
-                stroke-width="4"
+                strokeWidth="4"
               />
             </svg>
           </div>

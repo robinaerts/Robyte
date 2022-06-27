@@ -10,10 +10,6 @@ export default function Art({ projects }) {
     document.getElementsByTagName("html")[0].style.overflowY = "scroll";
   }
 
-  const getArtProjects = async () => {
-    setProjects(myProjects);
-  };
-
   return (
     <div id="art-container">
       <div id="art-text">
@@ -38,6 +34,7 @@ export default function Art({ projects }) {
           projects.map((project, i) => {
             return (
               <div
+                key={-project.timeStamp}
                 onClick={() => setEnlarge(i)}
                 className="art-project-container"
                 style={{

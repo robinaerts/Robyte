@@ -34,7 +34,7 @@ export default function ProjectDetail(props) {
           </a>
           <p id="project-details-description">{props.project.description}</p>
           {props.project.visit && (
-            <a href={props.project.visit} target="_blank">
+            <a href={props.project.visit} target="_blank" rel="noreferrer">
               <button id="visit-button">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -67,9 +67,10 @@ export default function ProjectDetail(props) {
                 comments={props.project.comments}
               />
             )}
-            {props.project.comments.map((comment) => {
+            {props.project.comments.map((comment, i) => {
               return (
                 <Comment
+                  key={i}
                   data={{
                     name: comment.name,
                     content: comment.content,
