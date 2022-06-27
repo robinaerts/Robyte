@@ -7,7 +7,7 @@ export default function Nav() {
 
   useEffect(() => {
     setUser(auth.currentUser);
-  });
+  }, []);
 
   const logout = () => {
     auth.signOut();
