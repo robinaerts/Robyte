@@ -1,9 +1,13 @@
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { auth } from "../config/firebaseconfig";
 
 export default function Nav() {
   const [user, setUser] = useState(auth.currentUser);
+
+  useEffect(() => {
+    setUser(auth.currentUser);
+  });
 
   const logout = () => {
     auth.signOut();

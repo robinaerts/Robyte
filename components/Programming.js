@@ -1,36 +1,19 @@
 import ProgrammingProject from "./ProgrammingProject";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
-import { auth, db } from "../config/firebaseconfig";
-import { collection, getDocs, query } from "firebase/firestore";
+import { auth } from "../config/firebaseconfig";
 import AddProject from "./AddProject";
 
-export default function Programming() {
+function Programming({ projects }) {
   const user = auth.currentUser;
   const [addProject, setAddProject] = useState(false);
-
   const [enlarge, setEnlarge] = useState();
+
   if (enlarge !== undefined && process.browser) {
     document.getElementsByTagName("html")[0].style.overflowY = "hidden";
   } else if (process.browser) {
     document.getElementsByTagName("html")[0].style.overflowY = "scroll";
   }
-
-  const [projects, setProjects] = useState([]);
-
-  useEffect(() => {
-    getProgrammingProjects();
-  }, []);
-
-  const getProgrammingProjects = async () => {
-    const q = query(collection(db, "programming"));
-    const proj = await getDocs(q);
-    const myProjects = [];
-    proj.forEach((doc) => {
-      myProjects.push(doc.data());
-    });
-    setProjects(myProjects);
-  };
 
   return (
     <div id="programming-container">
@@ -47,7 +30,9 @@ export default function Programming() {
             DEV
           </a>
           {user && user.email === "nibor.aerts@gmail.com" && (
-            <button onClick={() => setAddProject(true)}>+</button>
+            <button id="add-project-button" onClick={() => setAddProject(true)}>
+              +
+            </button>
           )}
         </div>
         <p className="section-title-description">
@@ -85,3 +70,5 @@ export default function Programming() {
     </div>
   );
 }
+
+export default Programming;

@@ -1,14 +1,8 @@
-import { collection, getDocs, query } from "firebase/firestore";
-import { useEffect, useState } from "react";
-import { db } from "../config/firebaseconfig";
+import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 
-export default function Art() {
-  const [projects, setProjects] = useState([]);
+export default function Art({ projects }) {
   const [enlarge, setEnlarge] = useState();
-  useEffect(() => {
-    getArtProjects();
-  });
 
   if (enlarge !== undefined && process.browser) {
     document.getElementsByTagName("html")[0].style.overflowY = "hidden";
@@ -17,12 +11,6 @@ export default function Art() {
   }
 
   const getArtProjects = async () => {
-    const q = query(collection(db, "art"));
-    const proj = await getDocs(q);
-    const myProjects = [];
-    proj.forEach((doc) => {
-      myProjects.push(doc.data());
-    });
     setProjects(myProjects);
   };
 

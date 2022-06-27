@@ -36,6 +36,7 @@ export default function AddProject(props) {
   };
 
   const addProject = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const fileRef = ref(
       storage,
@@ -68,6 +69,8 @@ export default function AddProject(props) {
     } else {
       await setDoc(doc(db, "art", Date.now().toString()), project);
     }
+    setLoading(false);
+    props.setAddProject();
     router.push("/");
   };
 
