@@ -9,8 +9,8 @@ export default function Landing() {
             <span className="yellow-text">1</span>TE
           </h1>
           <p id="landing-subtext">
-            I build <b>unique</b> and <b>creative</b> solutions to remove your
-            discomforts problems
+            I design <b>unique</b> and <b>creative</b> solutions to remove your
+            discomforts and problems
           </p>
         </div>
         <ul id="nav-badges">

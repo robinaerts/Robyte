@@ -1,3 +1,8 @@
+html {
+  /* zoom: 75%; */
+  font-size: 75%;
+}
+
 html,
 body {
   padding: 0;
@@ -29,6 +34,7 @@ a {
 }
 
 #landing-spaceship {
+  width: 90%;
   position: absolute;
   right: -10rem;
   top: -5rem;
@@ -77,7 +83,7 @@ a {
   left: 47%;
   top: 86%;
   fill: rgb(152, 152, 152);
-  width: 40px;
+  width: 30px;
 }
 
 circle {
@@ -274,8 +280,9 @@ text-align: center;
   border-top-left-radius: 17px;
   border-bottom-left-radius: 17px;
   width: 90%;
-  height: 50px;
+  height: 40px;
   outline: none;
+  border: none;
 }
 
 
@@ -283,12 +290,17 @@ text-align: center;
   outline: none;
   border: none;
   font-weight: bold;
-  height: 50px;
+  height: 40px;
   padding: 1rem 1.3rem;
   background: #EFBA13;
   border-top-right-radius: 17px;
   border-bottom-left-radius: 17px;
   margin-left: -5rem;
+}
+
+#footer-submit:hover {
+  background: #dcad12;
+  cursor: pointer;
 }
 
 /* LOGIN */

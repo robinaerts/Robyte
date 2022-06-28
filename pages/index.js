@@ -5,6 +5,7 @@ import Nav from "../components/Nav";
 import Programming from "../components/Programming";
 import { collection, getDocs, query } from "firebase/firestore";
 import { db } from "../config/firebaseconfig";
+import Head from "next/head";
 
 export async function getStaticProps() {
   // PROGRAMMING PROJECTS
@@ -34,6 +35,9 @@ export async function getStaticProps() {
 export default function Home({ P_projects, A_projects }) {
   return (
     <div>
+      <Head>
+        <title>Robyte | Simplify your life</title>
+      </Head>
       <Nav />
       <Landing />
       <Programming projects={P_projects} />

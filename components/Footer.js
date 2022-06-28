@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Footer() {
   return (
     <div id="footerContainer">
@@ -5,10 +7,18 @@ export default function Footer() {
         <div className="footerItem">
           <h5 className="footerItemHeading">Robyte</h5>
           <div id="footerItemItems">
-            <p className="footerItemItem">Dev</p>
-            <p className="footerItemItem">Art</p>
-            <p className="footerItemItem">About</p>
-            <p className="footerItemItem">Signin</p>
+            <Link href="#programming-container">
+              <p className="footerItemItem">Dev</p>
+            </Link>
+            <Link href="#art-container">
+              <p className="footerItemItem">Art</p>
+            </Link>
+            {/* <Link href="#about-container">
+              <p className="footerItemItem">About</p>
+            </Link> */}
+            <Link href="/login">
+              <p className="footerItemItem">Signin</p>
+            </Link>
           </div>
         </div>
         <div className="footerItem">
@@ -16,7 +26,6 @@ export default function Footer() {
           <div id="footerItemItems">
             <p className="footerItemItem">Robyte</p>
             <p className="footerItemItem">Familyplanner</p>
-            <p className="footerItemItem">Grady</p>
           </div>
         </div>
         <div id="footerContact">
