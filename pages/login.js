@@ -7,6 +7,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../config/firebaseconfig";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 export default function Login() {
   const router = useRouter();
@@ -43,6 +44,9 @@ export default function Login() {
 
   return (
     <div id="login-page-container">
+      <Head>
+        <title>Robyte | Login</title>
+      </Head>
       <div id="login-page-left">
         <h1 className="landing-robyte">
           L<span className="yellow-text">0</span>G

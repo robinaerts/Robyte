@@ -38,7 +38,7 @@ export default function Art({ projects }) {
                 onClick={() => setEnlarge(i)}
                 className="art-project-container"
                 style={{
-                  background: `url('${project.preview}') center center/cover`,
+                  background: `url('${project.preview}') top center/cover`,
                 }}
               ></div>
             );

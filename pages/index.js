@@ -29,6 +29,7 @@ export async function getStaticProps() {
       P_projects: programming_projects,
       A_projects: art_projects,
     },
+    revalidate: 60,
   };
 }
 
