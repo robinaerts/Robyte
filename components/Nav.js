@@ -16,8 +16,8 @@ export default function Nav() {
 
   return (
     <ul id="nav-container">
-      <li className="dark-mode"></li>
-      <li className="nav-github"></li>
+      {/* <li className="dark-mode"></li>
+      <li className="nav-github"></li> */}
       {!user && (
         <li>
           <Link href="/login">

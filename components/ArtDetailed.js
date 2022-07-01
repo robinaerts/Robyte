@@ -1,8 +1,7 @@
-import Link from "next/link";
 import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 
-export default function Art({ projects }) {
+export default function ArtDetailed({ projects }) {
   const [enlarge, setEnlarge] = useState();
 
   if (enlarge !== undefined && process.browser) {
@@ -12,7 +11,7 @@ export default function Art({ projects }) {
   }
 
   return (
-    <div id="art-container">
+    <div id="art-container" className="art-detailed-container">
       <div id="art-text">
         <div className="section-title-badge">
           <h2 className="section-title">Recent Art</h2>
@@ -44,9 +43,6 @@ export default function Art({ projects }) {
               ></div>
             );
           })}
-        <Link href="/art">
-          <p id="view-more-projects">View more...</p>
-        </Link>
       </div>
       {enlarge !== undefined && (
         <div style={{ top: window.scrollY + "px" }} className="backdrop">

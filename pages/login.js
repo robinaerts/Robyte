@@ -59,7 +59,7 @@ export default function Login() {
           <input className="login-input" type="email" />
           <label className="login-label">Password:</label>
           <input className="login-input" type="password" />
-          <div>
+          <div style={{ display: "flex" }}>
             <input
               id="login-submit-button"
               onClick={(e) => signInEmail(e)}

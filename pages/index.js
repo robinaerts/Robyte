@@ -3,7 +3,7 @@ import Footer from "../components/Footer";
 import Landing from "../components/Landing";
 import Nav from "../components/Nav";
 import Programming from "../components/Programming";
-import { collection, getDocs, query } from "firebase/firestore";
+import { collection, getDocs, limit, query } from "firebase/firestore";
 import { db } from "../config/firebaseconfig";
 import Head from "next/head";
 
@@ -17,7 +17,7 @@ export async function getStaticProps() {
   });
 
   // ART PROJECTS
-  const q_a = query(collection(db, "art"));
+  const q_a = query(collection(db, "art"), limit(6));
   const proj_a = await getDocs(q_a);
   const art_projects = [];
   proj_a.forEach((doc) => {
@@ -38,6 +38,10 @@ export default function Home({ P_projects, A_projects }) {
     <div>
       <Head>
         <title>Robyte | Simplify your life</title>
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0"
+        ></meta>
       </Head>
       <Nav />
       <Landing />

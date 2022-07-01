@@ -222,6 +222,14 @@ text-align: center;
   cursor: pointer;
 }
 
+#view-more-projects {
+  font-size: 1.5rem;
+}
+
+#view-more-projects:hover {
+  cursor: pointer;
+}
+
 /* FOOTER */
 .footerItemHeading {
   padding: 1rem;
@@ -578,4 +586,90 @@ text-align: center;
 
 #add-badge-select:hover {
   cursor: pointer;
+}
+
+
+/* RESPONSIVE */
+
+@media only screen and (max-width: 950px) {
+  #landing-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100vw;
+  }
+  #landing-container {
+    margin:0;
+    justify-content: flex-start;
+    margin-top: 10vh;
+    width: 100vw;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  #landing-subtext {
+    width: 80%;
+  }
+
+  #nav-badges {
+    justify-content: center;
+    width: 100vw;
+    text-align: center;
+    padding: 0;
+  }
+  .nav-badge:last-child {
+    margin: 0;
+  }
+
+  #landing-spaceship {
+    width: 200vw;
+    left: 0;
+    top: 30vh;
+    opacity: 20%;
+  }
+
+  #nav-container {
+    justify-content: center;
+    width: 100vw;
+    margin: 1rem 0 0 0;
+    padding: 0;
+  }
+
+  #programming-container, #art-container {
+    margin: 1.5rem;
+  }
+
+  #footerContent {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #footerContact {
+    width: 80%;
+  }
+
+  .art-detailed-container {
+    margin-top: 15vh!important;
+  }
+
+  #project-container {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  #project-preview {
+    width: 100%;
+    height: 30%;
+  }
+
+  #project-details {
+    width: 100%;
+  }
+
+  #close-details {
+    top: 35vh;
+  }
 }

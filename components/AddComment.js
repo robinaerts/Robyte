@@ -30,19 +30,32 @@ export default function AddComment({ user, id, type, comments }) {
       ></div>
       <div style={{ width: "60%" }}>
         <p className="comment-name">{user.displayName}</p>
-        <input
-          ref={commentRef}
-          id="add-comment-input"
-          type="text"
-          placeholder="Comment..."
-        />
-        <button
-          onClick={addComment}
-          id="visit-button"
-          style={{ marginTop: "1rem", alignSelf: "flex-start" }}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "3rem",
+            marginBottom: "1rem",
+          }}
         >
-          ADD
-        </button>
+          <input
+            ref={commentRef}
+            id="add-comment-input"
+            type="text"
+            placeholder="Comment..."
+          />
+          <button
+            onClick={addComment}
+            id="visit-button"
+            style={{
+              marginLeft: "1.3rem",
+              justifyContent: "center",
+            }}
+          >
+            ADD
+          </button>
+        </div>
       </div>
     </div>
   );
