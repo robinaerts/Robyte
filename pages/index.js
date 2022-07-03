@@ -6,6 +6,8 @@ import Programming from "../components/Programming";
 import { collection, getDocs, limit, query } from "firebase/firestore";
 import { db } from "../config/firebaseconfig";
 import Head from "next/head";
+import About from "../components/About";
+import Contact from "../components/Contact";
 
 export async function getStaticProps() {
   // PROGRAMMING PROJECTS
@@ -47,6 +49,8 @@ export default function Home({ P_projects, A_projects }) {
       <Landing />
       <Programming projects={P_projects} />
       <Art projects={A_projects} />
+      <About />
+      <Contact />
       <Footer />
     </div>
   );

@@ -5,6 +5,7 @@ import { db } from "../config/firebaseconfig";
 export default function AddComment({ user, id, type, comments }) {
   const commentRef = useRef();
   const addComment = () => {
+    if (!commentRef.current.value) return;
     let projectRef;
     if (type.toLowerCase() === "dev") {
       projectRef = doc(db, "programming/" + id);
@@ -34,7 +35,7 @@ export default function AddComment({ user, id, type, comments }) {
           style={{
             display: "flex",
             justifyContent: "center",
-            alignItems: "center",
+            alignItems: "flex-end",
             height: "3rem",
             marginBottom: "1rem",
           }}
@@ -51,6 +52,7 @@ export default function AddComment({ user, id, type, comments }) {
             style={{
               marginLeft: "1.3rem",
               justifyContent: "center",
+              paddingLeft: "1.2rem",
             }}
           >
             ADD
