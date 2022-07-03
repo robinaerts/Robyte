@@ -42,7 +42,7 @@ export default function About() {
             <img id="profile-img" src="/me.png" alt="me" />
             <h3 id="profile-name">ROBIN AERTS</h3>
           </div>
-          <div style={{ width: "60%" }}>
+          <div id="welcome-text-container" style={{ width: "60%" }}>
             <h3 id="welcome-text">Welcome to Robyte!</h3>
             <p className="about-text">
               My name is Robin Aerts. I&apos;m a <strong>developer</strong> and

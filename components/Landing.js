@@ -28,8 +28,19 @@ export default function Landing() {
           >
             ART
           </a>
-          <a className="nav-badge" style={{ backgroundColor: "#EFBA13" }}>
+          <a
+            href="#about-container"
+            className="nav-badge"
+            style={{ backgroundColor: "#EFBA13" }}
+          >
             ABOUT
+          </a>
+          <a
+            href="#contact-container"
+            className="nav-badge"
+            style={{ backgroundColor: "#E64747" }}
+          >
+            CONTACT
           </a>
         </ul>
         <svg

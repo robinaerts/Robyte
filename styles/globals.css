@@ -265,6 +265,7 @@ text-align: center;
   background-color: #1B1B1B;
   margin-top: 5rem;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -316,6 +317,11 @@ text-align: center;
   margin-top: 4rem;
 }
 
+#contact-form-container {
+  display: "flex"; 
+  justify-content: "space-between";
+}
+
 .form-input {
   border: none;
   outline: none;
@@ -344,7 +350,7 @@ text-align: center;
 #contact-submit:hover {
   cursor: pointer;
   background-color: #d0a20c;
-}
+} 
 
 /* FOOTER */
 .footerItemHeading {
@@ -787,5 +793,30 @@ text-align: center;
 
   #close-details {
     top: 35vh;
+  }
+
+  #about-me-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  #welcome-text-container {
+    width: 90%!important;
+  }
+
+  #contact-img {
+    display: none;
+  }
+
+  #contact-form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  #contact-form {
+    width: 90%;
   }
 }

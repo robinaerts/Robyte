@@ -13,7 +13,7 @@ export default function Contact() {
           CONTACT
         </a>
       </div>
-      <div>
+      <div id="contact-form-container">
         <form
           id="contact-form"
           action="https://formspree.io/f/moqroqjj"
@@ -44,13 +44,20 @@ export default function Contact() {
           </label>
           <textarea
             className="form-input"
-            rows="5"
+            style={{ height: "auto" }}
+            rows="8"
             name="message"
             id="message"
             required={true}
           ></textarea>
-          <input id="contact-submit" type="SUBMIT" value="Submit" />
+          <input id="contact-submit" type="SUBMIT" value="Send" />
         </form>
+        <img
+          id="contact-img"
+          alt="contact drawing"
+          src="/contact.svg"
+          style={{ position: "absolute", width: "40%", right: "0" }}
+        />
       </div>
     </div>
   );
