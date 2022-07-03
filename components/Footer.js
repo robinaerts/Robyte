@@ -25,10 +25,14 @@ export default function Footer() {
           <h5 className="footerItemHeading">Products</h5>
           <div id="footerItemItems">
             <p className="footerItemItem">Robyte</p>
-            <a target="_blank" href="https://familyplanner.ga">
+            <a rel="noreferrer" target="_blank" href="https://familyplanner.ga">
               <p className="footerItemItem">Familyplanner</p>
             </a>
-            <a target="_blank" href="https://solar-discover.vercel.app/">
+            <a
+              rel="noreferrer"
+              target="_blank"
+              href="https://solar-discover.vercel.app/"
+            >
               <p className="footerItemItem">Solar Discover</p>
             </a>
           </div>
