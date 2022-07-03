@@ -45,8 +45,8 @@ export default function About() {
           <div style={{ width: "60%" }}>
             <h3 id="welcome-text">Welcome to Robyte!</h3>
             <p className="about-text">
-              My name is Robin Aerts. I'm a <strong>developer</strong> and a{" "}
-              <strong>creative artist</strong>. My goal with Robyte is to make
+              My name is Robin Aerts. I&apos;m a <strong>developer</strong> and
+              a <strong>creative artist</strong>. My goal with Robyte is to make
               your life easier and to automate the repetitive tasks in your
               life.
             </p>

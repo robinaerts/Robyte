@@ -2,7 +2,7 @@ export default function Contact() {
   return (
     <div id="contact-container">
       <div className="section-title-badge">
-        <h2 className="section-title">Let's Talk!</h2>
+        <h2 className="section-title">Let&apos;s Talk!</h2>
         <a
           className="nav-badge"
           style={{
