@@ -39,7 +39,7 @@ export default function About() {
         </div>
         <div id="about-me-container">
           <div>
-            <img id="profile-img" src="/me.png" alt="me" />
+            <img id="profile-img" src="/me.jpg" alt="me" />
             <h3 id="profile-name">ROBIN AERTS</h3>
           </div>
           <div id="welcome-text-container" style={{ width: "60%" }}>

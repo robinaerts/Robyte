@@ -13,7 +13,7 @@ export default function Contact() {
           CONTACT
         </a>
       </div>
-      <div id="contact-form-container">
+      <div id="contact-form-container" style={{ display: "flex" }}>
         <form
           id="contact-form"
           action="https://formspree.io/f/moqroqjj"
