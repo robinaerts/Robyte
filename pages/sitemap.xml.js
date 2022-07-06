@@ -24,9 +24,9 @@ export const getServerSideProps = async ({ res }) => {
     });
 
   const paths = JSON.parse(JSON.stringify(ids))[0];
-
-  const dynamicPaths = paths.map((path) => {
-    return `${BASE_URL}/product/${path.params.id}`;
+  console.log(paths);
+  const dynamicPaths = paths.id.map((id) => {
+    return `${BASE_URL}/product/${id.params.id}`;
   });
 
   const allPaths = [...staticPaths, ...dynamicPaths];
