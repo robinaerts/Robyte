@@ -46,6 +46,15 @@ export default function Login() {
     <div id="login-page-container">
       <Head>
         <title>Robyte | Login</title>
+        <meta
+          name="description"
+          content="Login to Robyte to comment on my projects!"
+        />
+        <meta property="og:title" content="Robyte | Login" />
+        <meta
+          property="og:description"
+          content="Login to Robyte to comment on my projects!"
+        />
       </Head>
       <div id="login-page-left">
         <h1 className="landing-robyte">

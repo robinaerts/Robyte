@@ -45,6 +45,8 @@ export default function AddProject(props) {
     const snapshot = await uploadBytes(fileRef, file);
     const url = await getDownloadURL(snapshot.ref);
 
+    const id = Date.now();
+
     const project = {
       preview: url,
       title: e.target[0].value,
@@ -56,7 +58,7 @@ export default function AddProject(props) {
         color: e.target[1].selectedOptions[0].style.backgroundColor,
         name: e.target[1].value,
       },
-      timestamp: Date.now(),
+      timestamp: id,
     };
     let glb;
     if (e.target[5].files[0]) {
@@ -65,9 +67,9 @@ export default function AddProject(props) {
     }
 
     if (project.badge.name.toLowerCase() === "dev") {
-      await setDoc(doc(db, "programming", Date.now().toString()), project);
+      await setDoc(doc(db, "programming", id.toString()), project);
     } else {
-      await setDoc(doc(db, "art", Date.now().toString()), project);
+      await setDoc(doc(db, "art", id.toString()), project);
     }
     setLoading(false);
     props.setAddProject();

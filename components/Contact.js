@@ -50,7 +50,7 @@ export default function Contact() {
             id="message"
             required={true}
           ></textarea>
-          <input id="contact-submit" type="SUBMIT" value="Send" />
+          <input readOnly id="contact-submit" type="SUBMIT" value="Send" />
         </form>
         <img
           id="contact-img"

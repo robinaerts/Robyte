@@ -522,6 +522,7 @@ text-align: center;
 }
 
 #project-container {
+  color: white;
   justify-self: center;
   margin: auto;
   position: absolute;
