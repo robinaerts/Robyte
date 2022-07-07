@@ -1,5 +1,4 @@
 import * as fs from "fs";
-import ids from "../data/projectIds.json";
 
 const Sitemap = () => {
   return null;
