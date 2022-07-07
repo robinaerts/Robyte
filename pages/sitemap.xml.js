@@ -1,4 +1,5 @@
 import * as fs from "fs";
+import ids from "../data/projectIds.json";
 
 const Sitemap = () => {
   return null;
@@ -8,7 +9,7 @@ export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "robyte.ga";
 
   const staticPaths = fs
-    .readdirSync("pages")
+    .readdirSync("./")
     .filter((staticPage) => {
       return ![
         "api",
@@ -22,26 +23,7 @@ export const getServerSideProps = async ({ res }) => {
       return `${BASE_URL}/${staticPagePath}`;
     });
 
-  // const paths = JSON.parse(JSON.stringify(ids))[0];
-  const paths = {
-    id: [
-      { params: { id: "1656417070712" } },
-      { params: { id: "1656586663325" } },
-      { params: { id: "1656587180744" } },
-      { params: { id: "1656587215271" } },
-      { params: { id: "1656587235118" } },
-      { params: { id: "1656588216190" } },
-      { params: { id: "1656596070740" } },
-      { params: { id: "1656596557867" } },
-      { params: { id: "1656596905600" } },
-      { params: { id: "1656597149422" } },
-      { params: { id: "1656597542600" } },
-      { params: { id: "1656597781549" } },
-      { params: { id: "1656598240731" } },
-      { params: { id: "1656255576381" } },
-      { params: { id: "1656418525752" } },
-    ],
-  };
+  const paths = JSON.parse(JSON.stringify(ids))[0];
   const dynamicPaths = paths.id.map((id) => {
     return `${BASE_URL}/product/${id.params.id}`;
   });
