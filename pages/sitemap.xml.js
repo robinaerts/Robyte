@@ -6,10 +6,15 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "robyte.ga";
+  const BASE_URL = "https://robyte.ga";
 
   const staticPaths = fs
-    .readdirSync("./")
+    .readdirSync(
+      {
+        development: "pages",
+        production: "./",
+      }[process.env.NODE_ENV]
+    )
     .filter((staticPage) => {
       return ![
         "api",
