@@ -1,4 +1,4 @@
-import * as fs from "fs";
+// import * as fs from "fs";
 import ids from "../data/projectIds.json";
 
 const Sitemap = () => {
@@ -8,30 +8,32 @@ const Sitemap = () => {
 export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "https://robyte.ga";
 
-  const staticPaths = fs
-    .readdirSync(
-      {
-        development: "pages",
-        production: "./",
-      }[process.env.NODE_ENV]
-    )
-    .filter((staticPage) => {
-      return ![
-        "api",
-        "_app.js",
-        "_document.js",
-        "404.js",
-        "sitemap.xml.js",
-      ].includes(staticPage);
-    })
-    .map((staticPagePath) => {
-      return `${BASE_URL}/${staticPagePath}`;
-    });
+  // const staticPaths = fs
+  //   .readdirSync(
+  //     {
+  //       development: "pages",
+  //       production: "./",
+  //     }[process.env.NODE_ENV]
+  //   )
+  //   .filter((staticPage) => {
+  //     return ![
+  //       "api",
+  //       "_app.js",
+  //       "_document.js",
+  //       "404.js",
+  //       "sitemap.xml.js",
+  //     ].includes(staticPage);
+  //   })
+  //   .map((staticPagePath) => {
+  //     return `${BASE_URL}/${staticPagePath}`;
+  //   });
 
   const paths = JSON.parse(JSON.stringify(ids))[0];
   const dynamicPaths = paths.id.map((id) => {
     return `${BASE_URL}/product/${id.params.id}`;
   });
+
+  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login"];
 
   const allPaths = [...staticPaths, ...dynamicPaths];
 
