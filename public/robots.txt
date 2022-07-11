@@ -1,4 +1,1 @@
 User-agent: *
-Allow: /
-
-Sitemap: https://robyte.ga/sitemap.xml
