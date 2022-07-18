@@ -35,31 +35,66 @@ a {
   justify-content: center;
 }
 
+@keyframes spaceship_animation {
+  from {
+    top: -90rem;
+    right: -120rem;
+  }
+
+  to {
+    right: -10rem;
+    top: -5rem;
+  }
+}
+
 #landing-spaceship {
   width: 90%;
   position: absolute;
   right: -10rem;
   top: -5rem;
   opacity: 50%;
+  animation: 2s spaceship_animation ease-out;
+}
+
+@keyframes robytetext {
+  from {
+    transform: translateY(6rem);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    display: visible;
+    opacity: 100%;
+  }
 }
 
 .landing-robyte {
+  opacity: 0;
   color: white;
   font-weight: bold;
   font-size: 6rem;
   margin-bottom: 2rem;
+  animation: 700ms robytetext 100ms forwards;
 }
 
 .yellow-text {
   color: #EDCA66;
 }
 
+@keyframes undertext {
+  from {opacity: 0%;}
+  to {opacity: 100%;}
+}
+
 #landing-subtext {
+  opacity: 0%;
   margin-top: 0;
   color: white;
   font-weight: 600;
   font-size: 2rem;
   width: 35%;
+  animation: undertext 700ms 200ms forwards;
 }
 
 #nav-badges{
@@ -67,6 +102,9 @@ a {
  align-items: flex-start;
  margin: 4rem 0;
  padding: 0;
+ overflow: visible;
+ opacity: 0;
+ animation: undertext 700ms 500ms forwards;
 }
 
 .nav-badge {
@@ -78,6 +116,11 @@ a {
   font-size: 1.2rem;
   padding: 0.6rem 1.3rem;
   margin-right: 2rem;
+  transition: all 100ms;
+}
+
+.nav-badge:hover {
+  transform: scale(1.03);
 }
 
 #scroll-icon {
@@ -150,6 +193,7 @@ circle {
   margin-top: 5rem;
   margin-left: 8vw;
   color: white;
+  overflow: visible;
 }
 
 .section-title-badge {
@@ -172,6 +216,7 @@ circle {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 2rem;
+  overflow: visible;
 }
 
 .programming-project-container {
@@ -181,10 +226,14 @@ circle {
   background: #3D3D3D;
   display: flex;
   align-items: flex-end;
+  transition: all 300ms;
+  border: 2px solid inherit;
 }
 
 .programming-project-container:hover {
   cursor: pointer;
+  transform: scale(1.05);
+  border: 2px solid white;
 }
 
 .programming-project-text {
@@ -208,7 +257,8 @@ text-align: center;
 #art-container {
   margin-top: 5rem;
   margin-left: 8vw;
-  color: white;
+  color: white;  
+  overflow: visible;
 }
 
 .art-project-container {
@@ -218,10 +268,13 @@ text-align: center;
   background: #3D3D3D;
   display: flex;
   align-items: flex-end;
+  transition: all 300ms;
+  overflow: visible;
 }
 
 .art-project-container:hover {
   cursor: pointer;
+  transform: scale(1.03);
 }
 
 #view-more-projects {
@@ -749,6 +802,7 @@ text-align: center;
     top: 30vh;
     opacity: 20%;
   }
+
 
   #nav-container {
     justify-content: center;

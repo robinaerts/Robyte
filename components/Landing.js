@@ -2,7 +2,11 @@ export default function Landing() {
   return (
     <div id="landing-container">
       <img alt="spaceship" src="/spaceship.png" id="landing-spaceship" />
-      <div style={{ zIndex: 4 }}>
+      <div
+        style={{
+          zIndex: 4,
+        }}
+      >
         <div id="landing-text">
           <h1 className="landing-robyte">
             R<span className="yellow-text">0</span>B
