@@ -27,7 +27,7 @@ export default function Art({ projects }) {
           </a>
         </div>
         <p className="section-title-description">
-          In my free time I love to make art
+          I try to make beautiful and unique art pieces
         </p>
       </div>
       <div id="programming-projects-container">

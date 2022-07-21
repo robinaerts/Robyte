@@ -36,7 +36,7 @@ function Programming({ projects }) {
           )}
         </div>
         <p className="section-title-description">
-          In my free time I love to program
+          I design and build software for multiple platforms
         </p>
       </div>
       <div id="programming-projects-container">
