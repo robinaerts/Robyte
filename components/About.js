@@ -106,7 +106,7 @@ export default function About() {
           <FiSmartphone className="skill-headlogo" />
           <h3 className="skill-title">MOBILE</h3>
           <p className="skill-description">
-            I built mobile cross-platforms applications
+            I build mobile cross-platform applications
           </p>
           <div className="skill-icons">
             <SiFlutter />
@@ -116,7 +116,7 @@ export default function About() {
         <div className="skill-category">
           <FaDesktop className="skill-headlogo" />
           <h3 className="skill-title">DESKTOP</h3>
-          <p className="skill-description">I built native desktop apps</p>
+          <p className="skill-description">I build native desktop apps</p>
           <div className="skill-icons">
             <SiCsharp />
             <SiCplusplus />
