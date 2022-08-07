@@ -30,7 +30,7 @@ export const getServerSideProps = async ({ res }) => {
 
   const paths = JSON.parse(JSON.stringify(ids))[0];
   const dynamicPaths = paths.id.map((id) => {
-    return `${BASE_URL}/product/${id.params.id}`;
+    return `${BASE_URL}/project/${id.params.id}`;
   });
 
   const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login"];
