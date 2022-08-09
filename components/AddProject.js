@@ -1,5 +1,4 @@
-import { storage } from "../config/firebaseconfig";
-import { db } from "../config/firebaseconfig";
+import { storage, db } from "../helpers/firebaseconfig";
 import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
 import { doc, setDoc } from "firebase/firestore";
 import { useState } from "react";

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { auth } from "../config/firebaseconfig";
+import { auth } from "../helpers/firebaseconfig";
 import AddComment from "./AddComment";
 import Comment from "./Comment";
 

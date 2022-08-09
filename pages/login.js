@@ -5,7 +5,7 @@ import {
   signInWithEmailAndPassword,
   signInWithPopup,
 } from "firebase/auth";
-import { auth } from "../config/firebaseconfig";
+import { auth } from "../helpers/firebaseconfig";
 import { useRouter } from "next/router";
 import Head from "next/head";
 

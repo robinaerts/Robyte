@@ -1,7 +1,7 @@
 import ProgrammingProject from "./ProgrammingProject";
 import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
-import { auth } from "../config/firebaseconfig";
+import { auth } from "../helpers/firebaseconfig";
 import AddProject from "./AddProject";
 
 function Programming({ projects }) {

@@ -1,6 +1,6 @@
 import { doc, updateDoc } from "firebase/firestore";
 import { useRef } from "react";
-import { db } from "../config/firebaseconfig";
+import { db } from "../helpers/firebaseconfig";
 
 export default function AddComment({ user, id, type, comments }) {
   const commentRef = useRef();

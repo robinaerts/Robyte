@@ -4,7 +4,7 @@ import Landing from "../components/Landing";
 import Nav from "../components/Nav";
 import Programming from "../components/Programming";
 import { collection, getDocs, limit, query } from "firebase/firestore";
-import { db } from "../config/firebaseconfig";
+import { db } from "../helpers/firebaseconfig";
 import Head from "next/head";
 import About from "../components/About";
 import Contact from "../components/Contact";

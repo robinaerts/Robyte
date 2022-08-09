@@ -1,7 +1,7 @@
 import Nav from "../components/Nav";
 import ArtDetailed from "../components/ArtDetailed";
 import { query, collection, getDocs } from "firebase/firestore";
-import { db } from "../config/firebaseconfig";
+import { db } from "../helpers/firebaseconfig";
 import Footer from "../components/Footer";
 import Head from "next/head";
 
