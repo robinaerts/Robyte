@@ -25,7 +25,7 @@ export default function FirstBlogPostPreview({ metadata }) {
             <div className="tag-container-preview">
               {metadata.tags.map((tag) => {
                 return (
-                  <Link href={`/blog/tag/${tag}`}>
+                  <Link key={tag} href={`/blog/tag/${tag}`}>
                     <a className="tag-preview">{tag}</a>
                   </Link>
                 );

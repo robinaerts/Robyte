@@ -1,0 +1,61 @@
+#add-project-details {
+    width: 50%;
+    height: 100%;
+  }
+  #add-project-details-text {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5rem;
+  }
+  
+  .add-project-input {
+    width: 80%;
+    outline: none;
+    border: none;
+    padding: 1rem 1.3rem;
+    border-radius: 50px;
+    margin: 1rem 0;
+  }
+  
+  #drop-file {
+    border: 2px dashed gray;
+    width: 80%;
+    height: 80%;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  #add-project-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .drag-over {
+    background: rgb(168, 168, 219);
+  }
+  
+  .add-badge-option {
+    font-weight: bold;
+  }
+  
+  #add-badge-select {
+    padding: 0.8rem 1.3rem;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    font-weight: bold;
+    background-color: #72a5c2;
+    color: white;
+  }
+  
+  #add-badge-select:hover {
+    cursor: pointer;
+  }
+  

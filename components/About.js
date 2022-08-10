@@ -20,6 +20,7 @@ import {
 import { IoMdCube, IoMdBrush } from "react-icons/io";
 import { FiSmartphone } from "react-icons/fi";
 import { FaDesktop } from "react-icons/fa";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -39,7 +40,14 @@ export default function About() {
         </div>
         <div id="about-me-container">
           <div>
-            <img id="profile-img" src="/me.jpg" alt="me" />
+            <Image
+              id="profile-img"
+              src="/me.jpg"
+              alt="me"
+              width="168px"
+              height="204px"
+              objectFit="cover"
+            />
             <h3 id="profile-name">ROBIN AERTS</h3>
           </div>
           <div id="welcome-text-container" style={{ width: "60%" }}>

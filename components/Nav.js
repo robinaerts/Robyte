@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { FaExternalLinkAlt } from "react-icons/fa";
 import { auth } from "../helpers/firebaseconfig";
 
 export default function Nav() {
@@ -16,8 +17,33 @@ export default function Nav() {
 
   return (
     <ul id="nav-container">
-      {/* <li className="dark-mode"></li>
-      <li className="nav-github"></li> */}
+      <li className="nav-item">
+        <Link href="/">
+          <p className="nav-robyte">
+            R<span className="yellow-text">0</span>
+            <br />B<span className="yellow-text">1</span>TE
+          </p>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href={"/blog"}>
+          <a className="nav-link">Blog</a>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <Link href={"/#about-container"}>
+          <a className="nav-link">About</a>
+        </Link>
+      </li>
+      <li className="nav-item">
+        <a
+          className="nav-link"
+          target={"_blank"}
+          href="https://github.com/robinaerts"
+        >
+          Github <FaExternalLinkAlt />
+        </a>
+      </li>
       {!user && (
         <li>
           <Link href="/login">
