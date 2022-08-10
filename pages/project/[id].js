@@ -2,7 +2,7 @@ import { doc, getDoc } from "firebase/firestore";
 import Head from "next/head";
 import Router from "next/router";
 import ProjectDetail from "../../components/ProjectDetail";
-import { db } from "../../config/firebaseconfig";
+import { db } from "../../helpers/firebaseconfig";
 import ids from "../../data/projectIds.json";
 
 export function getStaticPaths() {
