@@ -107,6 +107,10 @@ a {
  animation: undertext 700ms 500ms forwards;
 }
 
+.badge {
+  color: white;
+}
+
 .nav-badge {
   list-style-type: none;
   border-radius: 8px;
