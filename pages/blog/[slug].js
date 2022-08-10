@@ -5,6 +5,9 @@ import rehypeHighlight from "rehype-highlight";
 import rehypeSlug from "rehype-slug";
 import { getSlugs, getPostFromSlug } from "../../helpers/postApi";
 import "highlight.js/styles/atom-one-dark.css";
+import Nav from "../../components/Nav";
+import Link from "next/link";
+import Image from "next/image";
 
 export const getStaticPaths = async () => {
   return {
@@ -33,9 +36,42 @@ export const getStaticProps = async ({ params }) => {
 
 export default function PostPage({ meta, content }) {
   return (
-    <>
-      <h1>{meta.title}</h1>
-      <MDXRemote {...content} />
-    </>
+    <div>
+      <Nav />
+      <div id="blogpost">
+        <Link href={"/blog"}>
+          <p id="return-to-blog">&#60; Blog</p>
+        </Link>
+        <h1>{meta.title}</h1>
+        <div className="postmeta-container">
+          <p>
+            {new Date(meta.date).toLocaleDateString("en-US", {
+              month: "short",
+              year: "numeric",
+              day: "numeric",
+            })}
+          </p>
+          <span className="dot-seperator">·</span>
+          <p>Robin Aerts</p>
+          <span className="dot-seperator">·</span>
+          <div className="tag-container">
+            {meta.tags.map((tag) => {
+              return (
+                <Link href={`/blog/tag/${tag}`}>
+                  <a className="tag-preview">{tag}</a>
+                </Link>
+              );
+            })}
+          </div>
+        </div>
+        <Image
+          src={meta.image}
+          width="800px"
+          height="500px"
+          objectFit="cover"
+        />
+        <MDXRemote {...content} />
+      </div>
+    </div>
   );
 }

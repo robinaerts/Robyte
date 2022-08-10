@@ -15,7 +15,7 @@ body {
 }
 
 a {
-  color: inherit;
+  color: #efba13;
   text-decoration: none;
 }
 
@@ -779,7 +779,7 @@ text-align: center;
   transition: all 100ms;
 }
 
-#first-blogpost-container:hover {
+#first-blogpost-container:hover, .blogpost-preview-container:hover {
   cursor: pointer;
 }
 
@@ -846,6 +846,24 @@ text-align: center;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
+#blogpost {
+  color: white;
+  width: 800px;
+  font-size: large;
+  margin: 5rem auto;
+}
+
+.hljs {
+  border-radius: 7px;
+}
+
+#return-to-blog {
+  font-weight: bold;
+  color: #5a5a5a;
+}
+
+#return-to-blog:hover {cursor: pointer;}
 
 /* RESPONSIVE */
 
