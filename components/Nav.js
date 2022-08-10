@@ -39,6 +39,7 @@ export default function Nav() {
         <a
           className="nav-link"
           target={"_blank"}
+          rel="noreferrer"
           href="https://github.com/robinaerts"
         >
           Github <FaExternalLinkAlt />
