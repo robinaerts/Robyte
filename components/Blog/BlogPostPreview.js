@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export default function BlogPostPreview(metadata) {
+export default function BlogPostPreview({ metadata }) {
   return (
     <Link href={`/blog/${metadata.slug}`}>
       <div className="blogpost-preview-container">
