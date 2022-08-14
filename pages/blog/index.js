@@ -26,7 +26,7 @@ export default function Blog({ posts }) {
       <div id="all-posts-preview-container">
         {posts.map((post, index) => {
           if (index == 0) return;
-          return <BlogPostPreview metadata={post} />;
+          return <BlogPostPreview metadata={post} key={index}/>;
         })}
       </div>
     </div>
