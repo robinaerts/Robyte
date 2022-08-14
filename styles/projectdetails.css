@@ -1,135 +1,135 @@
 .backdrop {
-    background: rgba(0, 0, 0, 0.9);
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    left: 0;
-    overflow-y: hidden;
-    z-index: 100000000000;
-  }
-  
-  #project-container {
-    color: white;
-    justify-self: center;
-    margin: auto;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 15px;
-    display: flex;
-    background-color: #2A2A2A;
-    width: 80%;
-    height: 80%;
-  }
-  
-  #project-preview, #add-project-preview {
-    width: 50%;
-    height: 100%;
-    background-color: #151515;
-  }
-  
-  #project-details {
-    width: 50%;
-    text-align: center;
-    margin-top: 1.2rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  #project-details-title {
-    font-size: 2.5rem;
-    font-weight: bold;
-  }
-  
-  .badge {
-    font-weight: bold;
-    padding: 0.5rem 1.2rem;
-    border-radius: 50px;
-  }
-  
-  #project-details-description {
-    font-size: 1.5rem;
-    width: 80%;
-    margin: auto;
-    margin-top: 3rem;
-    font-weight: normal;
-  }
-  
-  #external-link-button {
-    width: 20px;
-  }
-  
-  #visit-button {
-    color: #2A2A2A;
-    background-color: #80C0E6;
-    outline: none;
-    border: none;
-    font-weight: bold;
-    margin-top: 3rem;
-    padding: 0.8rem 1.4rem;
-    border-radius: 5px;
-  }
-  
-  #visit-button:hover {
-    cursor: pointer;
-    background-color: #72a5c2;
-  }
-  
-  #visit-button-text {
-    margin-left: 1rem;
-    font-size: 1.3rem;
-    display: inline;
-  }
-  
-  #close-details {
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
-  }
-  
-  #close-details:hover {
-    cursor: pointer;
-  }
-  
-  #project-details-comments {
-    margin-top: 3rem;
-    width: 100%;
-  }
-  
-  #comments-section-title {
-    font-size: 1.5rem;
-    margin-bottom: 1.2rem;
-  }
-  
-  #comment-container {
-    display: flex;
-    align-items: center;
-    margin-left: 6rem;
-    width: 100%;
-  }
-  
-  .comment-profile-image {
-    margin-right: 2rem;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: #515151;
-  }
-  
-  .comment-name {
-    font-weight: bold;
-    text-align: left;
-  }
-  
-  .comment-content {
-    margin-top: -10px;
-  }
-  
-  #add-comment-input {
-    outline: none;
-    border: none;
-    padding: 0.8rem 1.3rem;
-    border-radius: 50px;
-    width: 100%;
-  }
-  
+  background: rgba(0, 0, 0, 0.9);
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  overflow-y: hidden;
+  z-index: 100000000000;
+}
+
+#project-container {
+  color: white;
+  justify-self: center;
+  margin: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  display: flex;
+  background-color: #2A2A2A;
+  width: 80%;
+  height: 80%;
+}
+
+#project-preview,
+#add-project-preview {
+  width: 50%;
+  height: 100%;
+  background-color: #151515;
+}
+
+#project-details {
+  width: 50%;
+  text-align: center;
+  margin-top: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+
+#project-details-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.badge {
+  font-weight: bold;
+  padding: 0.5rem 1.2rem;
+  border-radius: 50px;
+}
+
+#project-details-description {
+  font-size: 1.5rem;
+  width: 80%;
+  margin: auto;
+  margin-top: 3rem;
+  font-weight: normal;
+}
+
+#external-link-button {
+  width: 20px;
+}
+
+#visit-button {
+  color: #2A2A2A;
+  background-color: #80C0E6;
+  outline: none;
+  border: none;
+  font-weight: bold;
+  margin-top: 3rem;
+  padding: 0.8rem 1.4rem;
+  border-radius: 5px;
+}
+
+#visit-button:hover {
+  cursor: pointer;
+  background-color: #72a5c2;
+}
+
+#visit-button-text {
+  margin-left: 1rem;
+  font-size: 1.3rem;
+  display: inline;
+}
+
+#close-details {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+#close-details:hover {
+  cursor: pointer;
+}
+
+#project-details-comments {
+  margin-top: 3rem;
+  width: 100%;
+}
+
+#comments-section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+}
+
+#comment-container {
+  display: flex;
+  align-items: center;
+  margin-left: 6rem;
+  width: 100%;
+}
+
+.comment-profile-image {
+  margin-right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #515151;
+}
+
+.comment-name {
+  font-weight: bold;
+  text-align: left;
+}
+
+.comment-content {
+  margin-top: -10px;
+}
+
+#add-comment-input {
+  outline: none;
+  border: none;
+  padding: 0.8rem 1.3rem;
+  border-radius: 50px;
+  width: 100%;
+}

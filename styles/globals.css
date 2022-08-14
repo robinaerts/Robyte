@@ -22,8 +22,8 @@ a {
 * {
   box-sizing: border-box;
   overflow-x: hidden;
-  font-family:  'Montserrat', Arial, Helvetica, sans-serif;
-} 
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+}
 
 /* LANDING */
 #landing-container {
@@ -83,8 +83,13 @@ a {
 }
 
 @keyframes undertext {
-  from {opacity: 0%;}
-  to {opacity: 100%;}
+  from {
+    opacity: 0%;
+  }
+
+  to {
+    opacity: 100%;
+  }
 }
 
 #landing-subtext {
@@ -97,14 +102,14 @@ a {
   animation: undertext 700ms 200ms forwards;
 }
 
-#nav-badges{
- display: flex;
- align-items: flex-start;
- margin: 4rem 0;
- padding: 0;
- overflow: visible;
- opacity: 0;
- animation: undertext 700ms 500ms forwards;
+#nav-badges {
+  display: flex;
+  align-items: flex-start;
+  margin: 4rem 0;
+  padding: 0;
+  overflow: visible;
+  opacity: 0;
+  animation: undertext 700ms 500ms forwards;
 }
 
 .badge {
@@ -140,14 +145,16 @@ circle {
 }
 
 @keyframes scroll {
-  0% { 
+  0% {
     opacity: 0;
     cy: 481;
   }
+
   33% {
     opacity: 1;
   }
-  100% { 
+
+  100% {
     opacity: 0;
     cy: 231;
   }
@@ -202,7 +209,8 @@ circle {
   background-color: #EDCA66;
 }
 
-#nav-login:hover, #nav-logout:hover {
+#nav-login:hover,
+#nav-logout:hover {
   cursor: pointer;
 }
 
@@ -268,7 +276,7 @@ circle {
   background: #1D1D1D;
   height: 30%;
   width: 100%;
-text-align: center;
+  text-align: center;
 }
 
 #add-project-button {
@@ -285,7 +293,7 @@ text-align: center;
 #art-container {
   margin-top: 5rem;
   margin-left: 8vw;
-  color: white;  
+  color: white;
   overflow: visible;
 }
 
@@ -372,7 +380,7 @@ text-align: center;
 
 .skill-description {
   font-size: 1.3rem;
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 .skill-icons {
@@ -428,7 +436,7 @@ text-align: center;
 #contact-submit:hover {
   cursor: pointer;
   background-color: #d0a20c;
-} 
+}
 
 /* FOOTER */
 .footerItemHeading {
@@ -553,7 +561,8 @@ text-align: center;
   margin-bottom: 0.8rem;
 }
 
-#login-submit-button, #signup-submit-button {
+#login-submit-button,
+#signup-submit-button {
   text-align: center;
   width: 40%;
   font-size: 1.1rem;
@@ -562,7 +571,7 @@ text-align: center;
   outline: none;
   border-radius: 15px;
   font-weight: bold;
-  padding: 0.7rem 1.3rem ;
+  padding: 0.7rem 1.3rem;
 }
 
 #login-submit-button:hover {
@@ -601,8 +610,9 @@ text-align: center;
     text-align: center;
     width: 100vw;
   }
+
   #landing-container {
-    margin:0;
+    margin: 0;
     justify-content: flex-start;
     margin-top: 10vh;
     width: 100vw;
@@ -620,6 +630,7 @@ text-align: center;
     text-align: center;
     padding: 0;
   }
+
   .nav-badge:last-child {
     margin: 0;
   }
@@ -665,7 +676,10 @@ text-align: center;
     font-size: 1.5rem;
   }
 
-  #programming-container, #art-container, #about-container, #contact-container {
+  #programming-container,
+  #art-container,
+  #about-container,
+  #contact-container {
     margin: 1.5rem;
   }
 
@@ -674,12 +688,13 @@ text-align: center;
     align-items: center;
     text-align: center;
   }
+
   #footerContact {
     width: 80%;
   }
 
   .art-detailed-container {
-    margin-top: 15vh!important;
+    margin-top: 15vh !important;
   }
 
   #project-container {
@@ -689,16 +704,16 @@ text-align: center;
   }
 
   #project-preview {
-    width: 100%;
+    width: 100% !important;
     height: 30%;
   }
 
   #project-details {
-    width: 100%;
+    width: 100% !important;
   }
 
   #close-details {
-    top: 35vh;
+    top: 35vh !important;
   }
 
   #about-me-container {
@@ -708,7 +723,7 @@ text-align: center;
   }
 
   #welcome-text-container {
-    width: 90%!important;
+    width: 90% !important;
   }
 
   #contact-img {
