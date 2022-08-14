@@ -42,7 +42,7 @@ export default function Home({ P_projects, A_projects }) {
         <title>Robyte | Simplify your life</title>
         <meta
           name="viewport"
-          content="width=device-width, initial-scale=1.0"
+          // content="width=device-width, initial-scale=1.0"
         ></meta>
         <meta
           name="description"

@@ -641,6 +641,30 @@ text-align: center;
     padding: 0;
   }
 
+  .nav-item:first-of-type {
+    display: none;
+  }
+
+  .bigscreen {
+    display: none;
+  }
+
+  .nav-item {
+    padding: none;
+  }
+
+  .about-nav-item {
+    display: none;
+  }
+
+  .nav-badge {
+    font-size: 0.9rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
   #programming-container, #art-container, #about-container, #contact-container {
     margin: 1.5rem;
   }

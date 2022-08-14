@@ -19,7 +19,7 @@ function Programming({ projects }) {
     <div id="programming-container">
       <div id="programming-text">
         <div className="section-title-badge">
-          <h2 className="section-title">Recent Programming Projects</h2>
+          <h2 className="section-title">Programming Projects</h2>
           <a
             className="nav-badge"
             style={{

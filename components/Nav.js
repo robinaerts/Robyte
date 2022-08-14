@@ -30,7 +30,7 @@ export default function Nav() {
           <a className="nav-link">Blog</a>
         </Link>
       </li>
-      <li className="nav-item">
+      <li className="nav-item about-nav-item">
         <Link href={"/#about-container"}>
           <a className="nav-link">About</a>
         </Link>

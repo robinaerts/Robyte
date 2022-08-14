@@ -34,14 +34,14 @@ export default function Landing() {
           </a>
           <a
             href="#about-container"
-            className="nav-badge"
+            className="nav-badge bigscreen"
             style={{ backgroundColor: "#EFBA13" }}
           >
             ABOUT
           </a>
           <a
             href="#contact-container"
-            className="nav-badge"
+            className="nav-badge bigscreen"
             style={{ backgroundColor: "#E64747" }}
           >
             CONTACT
