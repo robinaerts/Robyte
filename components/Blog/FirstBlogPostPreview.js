@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function FirstBlogPostPreview({ metadata }) {
   return (
@@ -6,10 +7,16 @@ export default function FirstBlogPostPreview({ metadata }) {
       <div id="first-blogpost-container">
         <div
           id="first-blogpost-image"
-          style={{
-            background: `url(${metadata.image}) no-repeat center center/cover`,
-          }}
-        ></div>
+        >
+          <Image
+        placeholder="blur"
+        blurDataURL={metadata.image + "&w=50"}
+          alt={metadata.slug}
+          src={metadata.image + "&w=800"}
+          layout="fill"
+          objectFit="cover"
+        />
+        </div>
         <div id="first-blogpost-text-container">
           <h1>{metadata.title}</h1>
           <p className="excerpt-preview">{metadata.excerpt}</p>

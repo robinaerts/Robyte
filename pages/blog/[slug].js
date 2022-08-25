@@ -65,8 +65,10 @@ export default function PostPage({ meta, content }) {
           </div>
         </div>
         <Image
+        placeholder="blur"
+        blurDataURL={meta.image + "&w=50"}
           alt={meta.slug}
-          src={meta.image}
+          src={meta.image + "&w=800"}
           width="800px"
           height="500px"
           objectFit="cover"
