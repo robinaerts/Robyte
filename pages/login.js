@@ -8,6 +8,7 @@ import {
 import { auth } from "../helpers/firebaseconfig";
 import { useRouter } from "next/router";
 import Head from "next/head";
+import Nav from "../components/Nav";
 
 export default function Login() {
   const router = useRouter();
@@ -56,8 +57,9 @@ export default function Login() {
           content="Login to Robyte to comment on my projects!"
         />
       </Head>
+      <Nav/>
       <div id="login-page-left">
-        <h1 className="landing-robyte">
+        <h1 className="login-robyte">
           L<span className="yellow-text">0</span>G
           <span className="yellow-text">1</span>N
         </h1>
