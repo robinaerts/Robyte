@@ -61,7 +61,7 @@
 }
 
 .blogpost-preview-container {
-  height: 45rem;
+  height: 100%;
   max-width: 30rem;
   padding: 2rem;
   background-color: #1D1D1D;
@@ -76,7 +76,7 @@
 }
 
 .blogpost-preview-image {
-  height: 40%;
+  height: 15rem;
   border-radius: 10px;
   position: relative;
 }
@@ -131,7 +131,11 @@
   padding: 0 2rem;
 }
 
-
+#tag-container {
+  margin-top: 10rem;
+  margin-left: 8vw;
+  color: white;
+}
 
 @media only screen and (max-width: 830px) {
   #all-posts-preview-container {

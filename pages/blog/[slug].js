@@ -64,7 +64,7 @@ export default function PostPage({ meta, content }) {
           <div className="tag-container">
             {meta.tags.map((tag) => {
               return (
-                <Link key={tag} href={`/blog/tag/${tag}`}>
+                <Link key={tag} href={`/blog/tags/${tag}`}>
                   <a className="tag-preview">{tag}</a>
                 </Link>
               );

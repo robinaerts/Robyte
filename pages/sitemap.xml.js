@@ -29,13 +29,13 @@ export const getServerSideProps = async ({ res }) => {
   //   });
 
   const paths = JSON.parse(JSON.stringify(ids))[0];
-  const dynamicPaths = paths.id.map((id) => {
+  const dynamicProjects = paths.id.map((id) => {
     return `${BASE_URL}/project/${id.params.id}`;
   });
 
   const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login"];
 
-  const allPaths = [...staticPaths, ...dynamicPaths];
+  const allPaths = [...staticPaths, ...dynamicProjects];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
