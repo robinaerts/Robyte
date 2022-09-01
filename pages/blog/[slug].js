@@ -51,6 +51,11 @@ export default function PostPage({ meta, content }) {
         <meta name="author" content={meta.author} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:description" content={meta.excerpt} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@robinaerts0" />
+        <meta name="twitter:title" content={meta.title} />
+        <meta name="twitter:description" content={meta.excerpt} />
+        <meta name="twitter:image" content={meta.image + "&w=800"} />
       </Head>
       <Nav />
       <div id="blogpost">
