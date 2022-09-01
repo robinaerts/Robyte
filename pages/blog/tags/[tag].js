@@ -1,3 +1,4 @@
+import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import BlogPostPreview from "../../../components/Blog/BlogPostPreview";
@@ -30,6 +31,10 @@ export default function Tag({ posts }) {
   const { tag } = router.query;
   return (
     <>
+      <Head>
+        <title>Blog | {tag}</title>
+        <meta name="description" content={`Posts tagged with ${tag}`} />
+      </Head>
       <Nav />
       <div id="tag-container">
         <Link href={"/blog"}>

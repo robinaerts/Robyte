@@ -10,6 +10,7 @@ import Link from "next/link";
 import Image from "next/image";
 import BlogImage from "../../components/Blog/BlogImage";
 import Hint from "../../components/Blog/Hint";
+import Head from "next/head";
 
 const components = {
   BlogImage,
@@ -44,6 +45,13 @@ export const getStaticProps = async ({ params }) => {
 export default function PostPage({ meta, content }) {
   return (
     <div>
+      <Head>
+        <title>{meta.title}</title>
+        <meta name="description" content={meta.excerpt} />
+        <meta name="author" content={meta.author} />
+        <meta property="og:title" content={meta.title} />
+        <meta property="og:description" content={meta.excerpt} />
+      </Head>
       <Nav />
       <div id="blogpost">
         <Link href={"/blog"}>
@@ -59,7 +67,7 @@ export default function PostPage({ meta, content }) {
             })}
           </p>
           <span className="dot-seperator">·</span>
-          <p>Robin Aerts</p>
+          <p>{meta.author}</p>
           <span className="dot-seperator">·</span>
           <div className="tag-container">
             {meta.tags.map((tag) => {
