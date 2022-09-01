@@ -110,6 +110,29 @@
   cursor: pointer;
 }
 
+.alt-text {
+  font-style: italic;
+  color: #767676;
+}
+
+.hint-container {
+  background-color: rgb(66, 171, 66);
+  border-radius: 10px;
+}
+
+.hint-heading {
+  background-color: rgb(49, 124, 49);
+  padding: 0 2rem;
+  color: rgb(148, 197, 145);
+  font-weight: bold;
+}
+
+.hint-text {
+  padding: 0 2rem;
+}
+
+
+
 @media only screen and (max-width: 830px) {
   #all-posts-preview-container {
     flex-direction: column;

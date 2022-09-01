@@ -44,10 +44,10 @@ export default function Art({ projects }) {
               ></div>
             );
           })}
-        <Link href="/art">
-          <p id="view-more-projects">View more...</p>
-        </Link>
       </div>
+      <Link href="/art">
+        <p id="view-more-projects">View more...</p>
+      </Link>
       {enlarge !== undefined && (
         <div style={{ top: window.scrollY + "px" }} className="backdrop">
           <ProjectDetail

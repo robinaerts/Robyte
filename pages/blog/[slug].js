@@ -8,6 +8,13 @@ import "highlight.js/styles/atom-one-dark.css";
 import Nav from "../../components/Nav";
 import Link from "next/link";
 import Image from "next/image";
+import BlogImage from "../../components/Blog/BlogImage";
+import Hint from "../../components/Blog/Hint";
+
+const components = {
+  BlogImage,
+  Hint,
+};
 
 export const getStaticPaths = async () => {
   return {
@@ -65,15 +72,15 @@ export default function PostPage({ meta, content }) {
           </div>
         </div>
         <Image
-        placeholder="blur"
-        blurDataURL={meta.image + "&w=50"}
+          placeholder="blur"
+          blurDataURL={meta.image + "&w=50"}
           alt={meta.slug}
           src={meta.image + "&w=800"}
           width="800px"
           height="500px"
           objectFit="cover"
         />
-        <MDXRemote {...content} />
+        <MDXRemote components={components} {...content} />
       </div>
     </div>
   );

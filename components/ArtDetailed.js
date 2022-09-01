@@ -11,7 +11,11 @@ export default function ArtDetailed({ projects }) {
   }
 
   return (
-    <div id="art-container" className="art-detailed-container">
+    <div
+      style={{ marginTop: "10rem" }}
+      id="art-container"
+      className="art-detailed-container"
+    >
       <div id="art-text">
         <div className="section-title-badge">
           <h2 className="section-title">Recent Art</h2>

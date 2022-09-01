@@ -1,0 +1,202 @@
+---
+title: Start building cross-platform apps with Flutter
+tags:
+  - dev
+  - flutter
+date: "2022-09-01"
+excerpt: Learn everything you need to know to start building cross-platform applications with flutter.
+slug: "fluttergetstarted"
+image: "https://images.unsplash.com/photo-1617040619263-41c5a9ca7521?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop"
+author: "Robin Aerts"
+---
+
+<br />
+
+You want to create an application that should be cross-platform, but you don't want to rewrite your app for all the different platforms out there?
+Then don't look any further, because Flutter is the right choise for you!
+
+<br />
+
+## What is Flutter?
+
+Flutter is an open-source <a target="blank" href="https://en.wikipedia.org/wiki/Software_development_kit">SDK</a> that was created by Google.
+
+It's build on top op the <a target="blank" href="https://en.wikipedia.org/wiki/Dart_(programming_language)">Dart programming language</a>
+and is meant to develop applications for a variety of <a target="blank" href="https://docs.flutter.dev/development/tools/sdk/release-notes/supported-platforms">different platforms</a> from a single codebase.
+
+This removes the need for rebuilding an application for every platform you want to support and can decrease development time drastically.
+
+<br />
+
+## Install Flutter
+
+To install flutter, I recommend you to follow <a target="blank" href="https://docs.flutter.dev/get-started/install">this official guide</a> to set it up for your OS.
+After you've installed it, you can confirm the installation by running:
+
+```bash
+flutter doctor
+```
+
+If no errors come up, you're good to go!
+
+<br />
+
+## Build your first Flutter app
+
+<br />
+### Creating a new Flutter project If you want to create a new Flutter application,
+you should run the following command from your terminal:
+
+```bash
+flutter create myapplication
+```
+
+After it's done you can open it in your IDE, I prefer VScode, but Android Studio is also a great choise.
+
+<br />
+
+### Project structure
+
+Here is the basic project structure:
+
+<BlogImage
+  src="/postAssets/flutter-getstarted-1.webp"
+  alt="Basic project structure"
+  height="619px"
+  width="283px"
+/>
+
+Most of these folders contain build tools and options for different platforms (like 'android', 'ios', 'web', etc.). You won't need these folders as much.
+
+One important file we spot here is the <strong>pubspec.yaml</strong> file. This file is written in the <a href="https://en.wikipedia.org/wiki/YAML" target="_blank">YAML syntax</a> and here you will put all your external packages that you want to use in your application.
+
+The folder where you will put all your code is the <strong>lib</strong> folder. In this folder you can already find a <strong>main.dart</strong> file which will be the entry point of your application.
+
+<br />
+
+### Basic application
+
+Here you see the code of a basic flutter application, try to read it and guess what the application would do. Don't worry if you don't understand everything (or anything at all). In the next blog post we'll dive into the foundations of a flutter program.
+
+<Hint>
+  Don't be overwhelmed by the amount of code, a lot of it is actually
+  boilerplate and quite straight forward if you take a closer look at it.
+</Hint>
+
+```
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+    );
+  }
+}
+
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+
+  final String title;
+
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _counter = 0;
+
+  void _incrementCounter() {
+    setState(() {
+      _counter++;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            const Text(
+              'You have pushed the button this many times:',
+            ),
+            Text(
+              '$_counter',
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: _incrementCounter,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
+    );
+  }
+}
+
+```
+
+<br />
+
+For now you can change for example some text like this:
+
+```
+const Text(
+  "You have pushed the button this many times:"
+),
+```
+
+into this:
+
+```
+const Text(
+  "Hello World!"
+),
+```
+
+<br />
+
+## Run your application
+
+If you want to run your application you can run this command in your terminal
+
+```
+flutter run -d 'device'
+```
+
+Here you'll have to replace <em>'device'</em> with the actual device you want to use (like <strong>android</strong> or <strong>windows</strong>). The simplest for now is that you use <strong>Chrome</strong>.
+
+<Hint>
+  To run flutter on a mobile device we'll have to install an
+  <strong>emulators</strong> or a real physical device. In a next post we'll cover
+  how to install this.
+</Hint>
+
+After running this command a browser window should pop up with your application.
+
+<BlogImage
+  src="/postAssets/flutter-getstarted-2.webp"
+  alt="Running application on Chrome"
+  width="500"
+  height="770"
+/>
+
+Congratulations 🎊, you just ran your first Flutter app!
