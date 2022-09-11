@@ -34,12 +34,22 @@ export const getServerSideProps = async ({ res }) => {
   });
 
   const blogPosts = fs
-    .readdirSync("posts")
+    .readdirSync("blog")
         .map((staticPagePath) => {
-      return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
+          if (staticPagePath){
+            return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
+          }
     });
 
-  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login", BASE_URL + "/blog"];
+  // const tags = fs
+  //   .readdirSync("blog/tags")
+  //       .map((staticPagePath) => {
+  //         if (staticPagePath){
+  //           return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
+  //         }
+  //   });
+
+  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login", BASE_URL + "/blog", BASE_URL + "/blog/tags"];
 
   const allPaths = [...staticPaths, ...dynamicProjects, ...blogPosts];
 
