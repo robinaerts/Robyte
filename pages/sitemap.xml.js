@@ -1,4 +1,4 @@
-// import * as fs from "fs";
+import * as fs from "fs";
 import ids from "../data/projectIds.json";
 
 const Sitemap = () => {
@@ -33,9 +33,15 @@ export const getServerSideProps = async ({ res }) => {
     return `${BASE_URL}/project/${id.params.id}`;
   });
 
-  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login"];
+  const blogPosts = fs
+    .readdirSync("posts")
+        .map((staticPagePath) => {
+      return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
+    });
 
-  const allPaths = [...staticPaths, ...dynamicProjects];
+  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login", BASE_URL + "/blog"];
+
+  const allPaths = [...staticPaths, ...dynamicProjects, ...blogPosts];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
