@@ -62,6 +62,7 @@ export default function Landing() {
           <circle cx="306" cy="231" r="45" />
         </svg>
       </div>
+      <img alt="moon" src="/moon.png" id="landing-moon" />
     </div>
   );
 }
