@@ -43,13 +43,13 @@ a {
 
 @keyframes spaceship_animation {
   from {
-    top: -90rem;
+    bottom: 90rem;
     right: -120rem;
   }
 
   to {
     right: -10rem;
-    top: -5rem;
+    bottom: 3rem;
   }
 }
 
@@ -58,7 +58,7 @@ a {
   position: absolute;
   right: -10rem;
   bottom: 3rem;
-  opacity: 50%;
+  opacity: 60%;
   animation: 2s spaceship_animation ease-out;
   z-index: 1;
 }
