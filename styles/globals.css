@@ -41,26 +41,14 @@ a {
 
 }
 
-@keyframes spaceship_animation {
-  from {
-    bottom: 90rem;
-    right: -120rem;
-  }
-
-  to {
-    right: -10rem;
-    bottom: 3rem;
-  }
-}
-
 #landing-spaceship {
   width: 90%;
   position: absolute;
   right: -10rem;
-  bottom: 3rem;
+  bottom: -5rem;
   opacity: 60%;
-  animation: 2s spaceship_animation ease-out;
   z-index: 1;
+  mix-blend-mode: lighten;
 }
 
 @keyframes robytetext {

@@ -1,7 +1,32 @@
+import { useEffect } from "react";
+import { useRef } from "react";
+
 export default function Landing() {
+  const spaceshipRef = useRef();
+
+  useEffect(() => {
+    spaceshipRef.current.addEventListener(
+      "timeupdate",
+      () => {
+        if (spaceshipRef.current.currentTime >= 14) {
+          spaceshipRef.current.currentTime = 2.55;
+          spaceshipRef.current.play();
+        }
+      },
+      false
+    );
+  }, []);
+
   return (
     <div id="landing-container">
-      <img alt="spaceship" src="/spaceship.png" id="landing-spaceship" />
+      <video
+        autoPlay
+        muted
+        loop
+        id="landing-spaceship"
+        src="/space.mp4"
+        ref={spaceshipRef}
+      ></video>
       <div
         style={{
           zIndex: 4,
@@ -13,8 +38,9 @@ export default function Landing() {
             <span className="yellow-text">1</span>TE
           </h1>
           <p id="landing-subtext">
-            I design <b>unique</b> and <b>creative</b> solutions to remove your
-            discomforts and problems
+            I design <b className="yellow-text landing-keyword">unique</b> and{" "}
+            <b className="yellow-text landing-keyword">creative</b> solutions to
+            remove your discomforts and problems
           </p>
         </div>
         <ul id="nav-badges">
