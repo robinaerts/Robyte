@@ -52,11 +52,19 @@ export default function Contact() {
           ></textarea>
           <input readOnly id="contact-submit" type="SUBMIT" value="Send" />
         </form>
-        <img
+        <video
+          autoPlay
+          muted
+          loop
           id="contact-img"
           alt="contact drawing"
-          src="/contact.svg"
-          style={{ position: "absolute", width: "40%", right: "0" }}
+          src="/rocket.mp4"
+          style={{
+            mixBlendMode: "lighten",
+            position: "relative",
+            width: "120%",
+            bottom: "1rem",
+          }}
         />
       </div>
     </div>

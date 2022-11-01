@@ -9,7 +9,7 @@ export default function Landing() {
       "timeupdate",
       () => {
         if (spaceshipRef.current.currentTime >= 14) {
-          spaceshipRef.current.currentTime = 2.55;
+          spaceshipRef.current.currentTime = 2.23;
           spaceshipRef.current.play();
         }
       },
