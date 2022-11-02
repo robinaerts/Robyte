@@ -9,6 +9,7 @@ import Head from "next/head";
 import About from "../components/About";
 import Contact from "../components/Contact";
 import Stats from "../components/Stats";
+import ProjectTimeline from "../components/ProjectTimeline";
 
 export async function getStaticProps() {
   // PROGRAMMING PROJECTS
@@ -58,6 +59,7 @@ export default function Home({ P_projects, A_projects }) {
       <Nav />
       <Landing />
       <Stats />
+      <ProjectTimeline />
       <Programming projects={P_projects} />
       <Art projects={A_projects} />
       <About />

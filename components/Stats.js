@@ -1,6 +1,4 @@
 import { BiGitCommit, BiTimer, BiWorld } from "react-icons/bi";
-import { FaProjectDiagram } from "react-icons/fa";
-import { SiPolymerproject } from "react-icons/si";
 
 const Stats = () => {
   return (
