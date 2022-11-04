@@ -2,18 +2,17 @@ export default function Contact() {
   return (
     <div id="contact-container">
       <div className="section-title-badge">
-        <h2 className="section-title">Let&apos;s Talk!</h2>
         <a
           className="nav-badge"
           style={{
-            marginLeft: "2.5rem",
             backgroundColor: "#E64747",
           }}
         >
           CONTACT
         </a>
+        <h2 className="section-title">Let&apos;s Talk!</h2>
       </div>
-      <div id="contact-form-container" style={{ display: "flex" }}>
+      <div id="contact-form-container">
         <form
           id="contact-form"
           action="https://formspree.io/f/moqroqjj"
@@ -52,20 +51,20 @@ export default function Contact() {
           ></textarea>
           <input readOnly id="contact-submit" type="SUBMIT" value="Send" />
         </form>
-        <video
-          autoPlay
+        {/* <video
+          // autoPlay
           muted
-          loop
+          // loop
           id="contact-img"
           alt="contact drawing"
           src="/rocket.mp4"
           style={{
             mixBlendMode: "lighten",
-            position: "relative",
-            width: "120%",
+            // position: "relative",
+
             bottom: "1rem",
           }}
-        />
+        /> */}
       </div>
     </div>
   );

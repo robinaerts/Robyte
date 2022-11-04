@@ -119,6 +119,7 @@ a {
 
 #nav-badges {
   display: flex;
+  gap: 1.5rem;
   align-items: flex-start;
   margin: 4rem 0;
   padding: 0;
@@ -453,12 +454,13 @@ circle {
   background-color: #06061b55;
   border-radius: 15px;
   filter: drop-shadow(-1px 6px 13px rgba(0, 0, 0, 0.5));
-  width: 85vw;
+  max-width: 90vw;
+  min-width: 80vw;
   margin: 2rem auto;
 }
 
 .programming-project-container {
-  width: 35rem;
+  width: 33rem;
   height: 23rem;
   border-radius: 10px;
   display: flex;
@@ -520,7 +522,7 @@ circle {
 }
 
 .art-project-container {
-  width: 35rem;
+  width: 33rem;
   height: 23rem;
   border-radius: 10px;
   background: #3D3D3D;
@@ -546,8 +548,7 @@ circle {
 /* ABOUT */
 #about-container {
   color: white;
-  margin-top: 5rem;
-  margin-left: 8vw;
+  margin-top: 15rem;
 }
 
 /* #profile-img {
@@ -561,8 +562,9 @@ circle {
 #about-me-container {
   display: flex;
   align-items: flex-start;
+  justify-content: center;
   gap: 4rem;
-  margin-top: 4rem;
+  margin: 4rem auto;
 }
 
 #welcome-text {
@@ -618,9 +620,14 @@ circle {
 /* CONTACT */
 #contact-container {
   color: white;
-  margin-left: 8vw;
-  margin-top: 5rem;
-  position: relative;
+  margin-top: 15rem;
+}
+
+#contact-form-container {
+  display: flex;
+  justify-content: center;
+  gap: 20rem;
+  margin: 2rem auto;
 }
 
 #contact-form {

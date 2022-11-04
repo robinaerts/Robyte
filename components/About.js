@@ -27,16 +27,15 @@ export default function About() {
     <>
       <div id="about-container">
         <div className="section-title-badge">
-          <h2 className="section-title">Who Am I?</h2>
           <a
             className="nav-badge"
             style={{
-              marginLeft: "2.5rem",
               backgroundColor: "#efba13",
             }}
           >
             ABOUT
           </a>
+          <h2 className="section-title">Who Am I?</h2>
         </div>
         <div id="about-me-container">
           <div>
