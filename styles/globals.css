@@ -836,6 +836,10 @@ circle {
     display: none;
   }
 
+  .landing-robyte {
+    font-size: 7rem;
+  }
+
   #landing-text {
     display: flex;
     flex-direction: column;
@@ -875,7 +879,7 @@ circle {
   #landing-spaceship {
     width: 150vw;
     left: 0;
-    top: 10vh;
+    top: 50vh;
     opacity: 20%;
   }
 
@@ -913,11 +917,30 @@ circle {
     font-size: 1.5rem;
   }
 
+  #stats-container {
+    flex-direction: column;
+    width: 100vw;
+    align-items: center;
+    justify-content: start;
+    margin-top: -8rem;
+  }
+
+  #timeline-start-icon, #timeline-path-down, #timeline-path-down-2, #horizontal-timeline::after {
+    display: none;
+  }
+
+  #horizontal-timeline {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+
   #programming-container,
   #art-container,
   #about-container,
   #contact-container {
     margin: 1.5rem;
+    margin-top: 8rem;
   }
 
   #footerContent {
