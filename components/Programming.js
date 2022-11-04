@@ -54,7 +54,7 @@ function Programming({ projects }) {
         <a
           style={{ color: "white" }}
           target="_blank"
-          rel="norefferer"
+          rel="noreferrer"
           href="https://www.github.com/robinaerts"
           className="programming-project-container"
         >
