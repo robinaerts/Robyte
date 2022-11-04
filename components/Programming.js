@@ -3,6 +3,8 @@ import { useState } from "react";
 import ProjectDetail from "./ProjectDetail";
 import { auth } from "../helpers/firebaseconfig";
 import AddProject from "./AddProject";
+import { FaGithub } from "react-icons/fa";
+import Link from "next/link";
 
 function Programming({ projects }) {
   const user = auth.currentUser;
@@ -19,11 +21,9 @@ function Programming({ projects }) {
     <div id="programming-container">
       <div id="programming-text">
         <div className="section-title-badge">
-          <h2 className="section-title">Programming Projects</h2>
           <a
             className="nav-badge"
             style={{
-              marginLeft: "2.5rem",
               backgroundColor: "#8CA3BF",
             }}
           >
@@ -34,6 +34,7 @@ function Programming({ projects }) {
               +
             </button>
           )}
+          <h1 className="section-title">Programming Projects</h1>
         </div>
         <p className="section-title-description">
           I design and build software for multiple platforms
@@ -50,6 +51,17 @@ function Programming({ projects }) {
             />
           );
         })}
+        <a
+          style={{ color: "white" }}
+          target="_blank"
+          href="https://www.github.com/robinaerts"
+          className="programming-project-container"
+        >
+          <div id="view-on-github-text">
+            <FaGithub id="view-gh-icon" />
+            <p>View more on Github</p>
+          </div>
+        </a>
       </div>
       {enlarge !== undefined && (
         <>

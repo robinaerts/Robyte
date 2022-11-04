@@ -137,9 +137,8 @@ a {
   color: white;
   text-align: center;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   padding: 0.6rem 1.3rem;
-  margin-right: 2rem;
   transition: all 100ms;
 }
 
@@ -296,7 +295,7 @@ circle {
   border-right: 4px solid #8F9CB5;
   border-bottom: 4px solid #8F9CB5;
   position: absolute;
-  top: 30%;
+  top: 45rem;
   right: 33%;
 }
 
@@ -305,7 +304,7 @@ circle {
   width: 3rem;
   border-right: 4px solid #8F9CB5;
   position: absolute;
-  top: 43%;
+  top: 65rem;
   right: 50%;
 }
 
@@ -338,6 +337,10 @@ circle {
   transform: scale(1.03);
   cursor: pointer;
   background-color: #ffdf75;
+}
+
+#code-video-container {
+  filter: drop-shadow(-1px 6px 13px rgba(0, 0, 0, 0.2));
 }
 
 /* NAVBAR */
@@ -408,40 +411,56 @@ circle {
 
 /* PROGRAMMING */
 #programming-container {
-  margin-top: 30vh;
-  margin-left: 8vw;
+  margin-top: 10vh;
   color: white;
   overflow: visible;
 }
 
+#programming-text {
+  margin-bottom: 5rem;
+}
+
 .section-title-badge {
+  
   display: flex;
+  justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .section-title {
+  color: white;
+  font-size: 4rem;
+  margin-top: 1;
   font-weight: bold;
-  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .section-title-description {
-  font-size: 1.2rem;
+  font-size: 1.6rem;
+  color: #b6b6b6;
   margin-top: 0;
+  text-align: center;
 }
 
 #programming-projects-container {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
   overflow: visible;
+  padding: 5rem;
+  background-color: #06061b55;
+  border-radius: 15px;
+  filter: drop-shadow(-1px 6px 13px rgba(0, 0, 0, 0.5));
+  width: 85vw;
+  margin: 2rem auto;
 }
 
 .programming-project-container {
   width: 35rem;
   height: 23rem;
   border-radius: 10px;
-  background: #3D3D3D;
   display: flex;
   align-items: flex-end;
   transition: all 300ms;
@@ -452,11 +471,31 @@ circle {
   transform: scale(1.05);
 }
 
-.programming-project-text {
-  background: #1D1D1D;
+.programming-project-text, #view-on-github-text {
+  background: #363a49;
   height: 30%;
   width: 100%;
   text-align: center;
+}
+
+#view-gh-icon, #view-art-icon {
+  height: 6rem;
+  width: 6rem;
+}
+
+#view-on-github-text, #view-more-art {
+  font-size: 1.4rem;
+  gap: 2rem;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#view-on-github-text {
+  height: 100%;
+
 }
 
 #add-project-button {
@@ -471,10 +510,13 @@ circle {
 
 /* ART */
 #art-container {
-  margin-top: 5rem;
-  margin-left: 8vw;
+  margin-top: 15rem;
   color: white;
   overflow: visible;
+}
+
+#art-text {
+  margin-bottom: 5rem;
 }
 
 .art-project-container {

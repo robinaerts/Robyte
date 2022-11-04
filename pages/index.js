@@ -21,7 +21,7 @@ export async function getStaticProps() {
   });
 
   // ART PROJECTS
-  const q_a = query(collection(db, "art"), limit(6));
+  const q_a = query(collection(db, "art"), limit(5));
   const proj_a = await getDocs(q_a);
   const art_projects = [];
   proj_a.forEach((doc) => {

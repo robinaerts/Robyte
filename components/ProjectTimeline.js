@@ -1,34 +1,17 @@
 import { MdPlayCircleOutline } from "react-icons/md";
-import { FaFlagCheckered } from "react-icons/fa";
-import { useEffect, useRef, useState } from "react";
 
 const ProjectTimeline = () => {
-  const [visible, setVisible] = useState(true);
-  const timelineRef = useRef();
+  // const deployClicked = () => {
+  //   const video = document.getElementById("code-video");
 
-  useEffect(() => {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => setVisible(entry.isIntersecting));
-    });
-    observer.observe(timelineRef.current);
-    return () => observer.unobserve(timelineRef.current);
-  }, []);
-
-  const deployClicked = () => {
-    const video = document.getElementById("code-video");
-
-    video.style.transform = "scale(1.03)";
-    setTimeout(() => {
-      video.style.transform = "scale(1)";
-    }, 400);
-  };
+  //   video.style.transform = "scale(1.03)";
+  //   setTimeout(() => {
+  //     video.style.transform = "scale(1)";
+  //   }, 400);
+  // };
 
   return (
-    <div
-      id="timeline-container"
-      ref={timelineRef}
-      className={`${visible ? "visible" : ""}`}
-    >
+    <div id="timeline-container">
       <h1 className="workflow-title">Project Workflow</h1>
       <div id="horizontal-timeline">
         <MdPlayCircleOutline id="timeline-start-icon" />
@@ -61,10 +44,12 @@ const ProjectTimeline = () => {
           </p>
         </div>
       </div>
-      <video id="code-video" autoPlay muted src="/code.mp4"></video>
-      <button onClick={deployClicked} id="timeline-deploy">
+      <div id="code-video-container">
+        <video id="code-video" autoPlay muted src="/code.mp4"></video>
+      </div>
+      {/* <button onClick={deployClicked} id="timeline-deploy">
         DEPLOY
-      </button>
+      </button> */}
     </div>
   );
 };

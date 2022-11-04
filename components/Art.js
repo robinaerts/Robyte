@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { useState } from "react";
+import { MdMoreHoriz } from "react-icons/md";
 import ProjectDetail from "./ProjectDetail";
 
 export default function Art({ projects }) {
@@ -15,22 +16,24 @@ export default function Art({ projects }) {
     <div id="art-container">
       <div id="art-text">
         <div className="section-title-badge">
-          <h2 className="section-title">Recent Art</h2>
           <a
             className="nav-badge"
             style={{
-              marginLeft: "2.5rem",
               backgroundColor: "#97C490",
             }}
           >
             ART
           </a>
+          <h2 className="section-title">Recent Art</h2>
         </div>
         <p className="section-title-description">
           I try to make beautiful and unique art pieces
         </p>
       </div>
-      <div id="programming-projects-container">
+      <div
+        id="programming-projects-container"
+        style={{ backgroundColor: "rgb(29 32 29)" }}
+      >
         {projects &&
           projects.map((project, i) => {
             return (
@@ -44,10 +47,17 @@ export default function Art({ projects }) {
               ></div>
             );
           })}
+        <Link href="/art">
+          <div
+            style={{ backgroundColor: "rgb(54 73 54)" }}
+            className="art-project-container"
+            id="view-more-art"
+          >
+            <MdMoreHoriz id="view-art-icon" />
+            <p>View More</p>
+          </div>
+        </Link>
       </div>
-      <Link href="/art">
-        <p id="view-more-projects">View more...</p>
-      </Link>
       {enlarge !== undefined && (
         <div style={{ top: window.scrollY + "px" }} className="backdrop">
           <ProjectDetail
