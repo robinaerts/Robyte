@@ -6,50 +6,43 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "https://robyte.ga";
+  const BASE_URL = "https://robyte.me";
 
-  // const staticPaths = fs
-  //   .readdirSync(
-  //     {
-  //       development: "pages",
-  //       production: "./",
-  //     }[process.env.NODE_ENV]
-  //   )
-  //   .filter((staticPage) => {
-  //     return ![
-  //       "api",
-  //       "_app.js",
-  //       "_document.js",
-  //       "404.js",
-  //       "sitemap.xml.js",
-  //     ].includes(staticPage);
-  //   })
-  //   .map((staticPagePath) => {
-  //     return `${BASE_URL}/${staticPagePath}`;
-  //   });
+  const projectPaths = JSON.parse(JSON.stringify(ids))[0];
 
-  const paths = JSON.parse(JSON.stringify(ids))[0];
-  const dynamicProjects = paths.id.map((id) => {
+  const dynamicProjects = projectPaths.id.map((id) => {
     return `${BASE_URL}/project/${id.params.id}`;
   });
 
-  // const blogPosts = fs
-  //   .readdirSync("blog")
-  //       .map((staticPagePath) => {
-  //         if (staticPagePath){
-  //           return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
-  //         }
-  //   });
+  // const dynamicBlogPosts = blogPaths.id.map((id) => {
+  //   return `${BASE_URL}/blog/${id.params.id}`;
+  // });
 
-  // const tags = fs
-  //   .readdirSync("blog/tags")
-  //       .map((staticPagePath) => {
-  //         if (staticPagePath){
-  //           return `${BASE_URL}/blog/${staticPagePath.slice(0,-4)}`;
-  //         }
-  //   });
+  // const blogPosts = fs.readdirSync("blog").map((staticPagePath) => {
+  //   if (staticPagePath) {
+  //     return `${BASE_URL}/blog/${staticPagePath.slice(0, -4)}`;
+  //   }
+  // });
 
-  const staticPaths = [BASE_URL + "/", BASE_URL + "/art", BASE_URL + "/login", BASE_URL + "/blog", BASE_URL + "/blog/tags"];
+  // const tags = fs.readdirSync("blog/tags").map((staticPagePath) => {
+  //   if (staticPagePath) {
+  //     return `${BASE_URL}/blog/${staticPagePath.slice(0, -4)}`;
+  //   }
+  // });
+
+  const staticPaths = [
+    BASE_URL + "/",
+    BASE_URL + "/art",
+    BASE_URL + "/login",
+    BASE_URL + "/store",
+    BASE_URL + "/store/web",
+    BASE_URL + "/store/mobile",
+    BASE_URL + "/blog",
+    BASE_URL + "/blog/fluttergetstarted",
+    BASE_URL + "/blog/tags",
+    BASE_URL + "/blog/tags/flutter",
+    BASE_URL + "/blog/tags/dev",
+  ];
 
   const allPaths = [...staticPaths, ...dynamicProjects];
 
