@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function Store() {
   return (
-    <div id="store-container">
+    <div className="store-container">
       <Head>
         <title>Robyte | Store</title>
         <meta name="description" content="Digital products I sell" />
