@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 const PopularProduct = ({ product }) => {
   return (
     <div className="product-option-popular">
@@ -6,11 +8,15 @@ const PopularProduct = ({ product }) => {
       <h3 className="product-price">{product.price}</h3>
       <p className="product-included-title">What do you get?</p>
       <ul className="product-included-list">
-        {product.included.map((item) => (
-          <li>✓ {item}</li>
+        {product.included.map((item, index) => (
+          <li key={index}>✓ {item}</li>
         ))}
       </ul>
-      <button className="primary-cta-product">Contact</button>
+      <Link href={product.mail} target="_blank" rel="noreferrer">
+        <a target="_blank" className="primary-cta-product">
+          Contact
+        </a>
+      </Link>
     </div>
   );
 };

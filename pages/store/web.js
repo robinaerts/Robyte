@@ -13,11 +13,13 @@ const WebStore = () => {
       "Help deploying your site",
       "Fast service",
     ],
+    mail: "mailto:nibor.aerts+robyte@gmail.com?subject=Web%20Code%20Request&body=Your%20request%20here",
   };
   const second = {
     title: "DESIGN",
     price: "€16/hr",
     included: ["Beautiful design", "Fast service"],
+    mail: "mailto:nibor.aerts+robyte@gmail.com?subject=Web%20Design%20Request&body=Your%20request%20here",
   };
   const popular = {
     title: "COMPLETE",
@@ -29,6 +31,7 @@ const WebStore = () => {
       "Fast service",
       "Beautiful design",
     ],
+    mail: "mailto:nibor.aerts+robyte@gmail.com?subject=Web%20Complete%20Request&body=Your%20request%20here",
   };
 
   return (

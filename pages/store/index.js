@@ -2,6 +2,7 @@ import Nav from "../../components/Nav";
 import Head from "next/head";
 import { FaAppStore, FaGlobe, FaMobileAlt } from "react-icons/fa";
 import { BsFillGearFill, BSFillGearFill } from "react-icons/bs";
+import { FiHelpCircle } from "react-icons/fi";
 import Link from "next/link";
 
 export default function Store() {
@@ -46,6 +47,22 @@ export default function Store() {
           </p>
           <Link href="/store/automate">
             <button className="product-section-cta">View the options</button>
+          </Link>
+        </div>
+        <div className="store-product">
+          <h2 className="product-section-title">OTHER</h2>
+          <FiHelpCircle className="product-section-icon" />
+          <p className="product-section-description">
+            Anything else I can help you with?
+          </p>
+          <Link
+            target="_blank"
+            rel="noreferrer"
+            href="mailto:nibor.aerts+robyte@gmail.com?subject=Custom%20store%20request&body=Your%20request%20here"
+          >
+            <button target="_blank" className="product-section-cta">
+              Contact
+            </button>
           </Link>
         </div>
       </div>

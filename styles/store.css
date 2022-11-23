@@ -75,6 +75,7 @@
     justify-content: center;
     align-items: center;
     gap: 4rem;
+    margin-top: 5rem;
     margin-bottom: 2rem;
     text-align: center;
 }
@@ -134,6 +135,7 @@
     padding: 0.7rem 1.3rem;
     position: absolute;
     bottom: 0;
+    transition: all 100ms;
 }
 
 .primary-cta-product {
@@ -141,6 +143,19 @@
     background-color: #879CCC;
     border: none;
     transform: translateX(-50%);
+}
+
+.primary-cta-product:hover {
+    background-color: #83a3d3;
+    cursor: pointer;
+    transform: translateX(-50%) scale(1.05);
+}
+
+.secondary-cta-product:hover {
+    background-color: #848484;
+    color: #202020;
+    cursor: pointer;
+    transform: scale(1.05);
 }
 
 .product-included-title {
