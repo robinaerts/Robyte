@@ -21,6 +21,11 @@ const AutomateStore = () => {
     <div>
       <Head>
         <title>Robyte Store - Automation</title>
+        <meta
+          name="description"
+          content="Need a script to automate a boring repeating task for you? I can help you with that!"
+        />
+        <meta name="title" content="Automation scripts for a low price" />
       </Head>
       <Nav />
       <div className="store-container">

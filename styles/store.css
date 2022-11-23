@@ -21,6 +21,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 8rem;
+    margin-bottom: 4rem;
 }
 
 .store-product {

@@ -9,9 +9,12 @@ export default function Store() {
   return (
     <div className="store-container">
       <Head>
-        <title>Robyte | Store</title>
-        <meta name="description" content="Digital products I sell" />
-        <meta name="title" content="Robyte | Store" />
+        <title>Robyte Store</title>
+        <meta
+          name="description"
+          content="Need a website, app, or do you want to automate a boring task? Robyte has you covered."
+        />
+        <meta name="title" content="Robyte Store" />
       </Head>
       <Nav />
       <h1 className="store-title">Store</h1>

@@ -19,9 +19,12 @@ export default function Blog({ posts }) {
   return (
     <div id="blog-container">
       <Head>
-        <title>Robyte | Blog</title>
-        <meta name="description" content="My personal blog" />
-        <meta name="title" content="Robyte | Blog" />
+        <title>Robyte Blog - Tutorials and tech help</title>
+        <meta
+          name="description"
+          content="Learn everything about the newest programming tools. Tutorials and articles on a wide variety of subjects"
+        />
+        <meta name="title" content="Robyte Blog - Tutorials and tech help" />
       </Head>
       <Nav />
       {size.width >= 830 ? (

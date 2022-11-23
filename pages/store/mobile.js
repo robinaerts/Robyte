@@ -38,6 +38,14 @@ const MobileStore = () => {
     <div>
       <Head>
         <title>Robyte Store - Mobile</title>
+        <meta
+          name="description"
+          content="Have a great idea for a mobile app? Let me help you make it a reality!"
+        />
+        <meta
+          name="title"
+          content="Turn your idea into a mobile app for a low price"
+        />
       </Head>
       <Nav />
       <div className="store-container">

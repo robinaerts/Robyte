@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useEffect } from "react";
 import { useRef } from "react";
 
@@ -44,7 +45,15 @@ export default function Landing() {
             solutions to remove your discomforts and problems
           </p>
         </div>
-        <ul id="nav-badges">
+        <div id="landing-cta-buttons">
+          <Link href="#programming-container">
+            <button id="landing-primary">My Work</button>
+          </Link>
+          <Link href="/store">
+            <button id="landing-secondary">Hire Me</button>
+          </Link>
+        </div>
+        {/* <ul id="nav-badges">
           <a
             href="#programming-container"
             className="nav-badge"
@@ -73,7 +82,7 @@ export default function Landing() {
           >
             CONTACT
           </a>
-        </ul>
+        </ul> */}
         <svg
           id="scroll-icon"
           version="1.1"

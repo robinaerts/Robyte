@@ -38,6 +38,14 @@ const WebStore = () => {
     <div>
       <Head>
         <title>Robyte Store - Web</title>
+        <meta
+          name="description"
+          content="Need a new website, or a new refreshing look for your current one?"
+        />
+        <meta
+          name="title"
+          content="Get a modern looking website for a low price"
+        />
       </Head>
       <Nav />
       <div className="store-container">

@@ -117,6 +117,50 @@ a {
   animation: undertext 700ms 200ms forwards;
 }
 
+#landing-cta-buttons {
+  margin-top: 3rem;
+  overflow: visible;
+  padding-bottom: 1rem;
+}
+
+#landing-primary {
+  background-color: #879CCC;
+  border: none;
+  outline: none;
+  color:white;
+  font-weight: bold;
+  padding: 1rem 2rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  margin-left: 3px;
+  transition: 100ms all;
+}
+
+#landing-secondary {
+  color: #879CCC;
+  border: 2px solid #879CCC;
+  font-weight: bold;
+  background: none;
+  outline: none;
+  padding: 1rem 2rem;
+  margin-left: 3rem;
+  border-radius: 3px;
+  font-size: 1.5rem;
+  transition: 100ms all;
+}
+
+#landing-primary:hover {
+  background-color: #7282aa;
+  color: white;
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
+#landing-secondary:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+
 #nav-badges {
   display: flex;
   gap: 1.5rem;
