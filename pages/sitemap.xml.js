@@ -6,7 +6,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "https://robyte.me";
+  const BASE_URL = "https://www.robyte.me";
 
   const projectPaths = JSON.parse(JSON.stringify(ids))[0];
 
