@@ -8,10 +8,10 @@ import Script from "next/script";
 import NextNProgress from "nextjs-progressbar";
 
 function MyApp({ Component, pageProps }) {
-  const adUrl = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.adId}`;
+  const adsenseUrl = `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-${process.env.adId}`;
   return (
     <>
-      <Script async src={adUrl} crossorigin="anonymous"></Script>
+      <Script async src={adsenseUrl} crossorigin="anonymous"></Script>
       <NextNProgress />
       <Component {...pageProps} />
     </>
