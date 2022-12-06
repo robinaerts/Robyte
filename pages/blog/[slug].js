@@ -58,42 +58,46 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:image" content={meta.image + "&w=800"} />
       </Head>
       <Nav />
-      <div id="blogpost">
-        <Link href={"/blog"}>
-          <p id="return-to-blog">&#60; Blog</p>
-        </Link>
-        <h1>{meta.title}</h1>
-        <div className="postmeta-container">
-          <p>
-            {new Date(meta.date).toLocaleDateString("en-US", {
-              month: "short",
-              year: "numeric",
-              day: "numeric",
-            })}
-          </p>
-          <span className="dot-seperator">·</span>
-          <p>{meta.author}</p>
-          <span className="dot-seperator">·</span>
-          <div className="tag-container">
-            {meta.tags.map((tag) => {
-              return (
-                <Link key={tag} href={`/blog/tags/${tag}`}>
-                  <a className="tag-preview">{tag}</a>
-                </Link>
-              );
-            })}
+      <div>
+        <div className="horizontal-container">
+          <div id="blogpost">
+            <Link href={"/blog"}>
+              <p id="return-to-blog">&#60; Blog</p>
+            </Link>
+            <h1>{meta.title}</h1>
+            <div className="postmeta-container">
+              <p>
+                {new Date(meta.date).toLocaleDateString("en-US", {
+                  month: "short",
+                  year: "numeric",
+                  day: "numeric",
+                })}
+              </p>
+              <span className="dot-seperator">·</span>
+              <p>{meta.author}</p>
+              <span className="dot-seperator">·</span>
+              <div className="tag-container">
+                {meta.tags.map((tag) => {
+                  return (
+                    <Link key={tag} href={`/blog/tags/${tag}`}>
+                      <a className="tag-preview">{tag}</a>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
+            <Image
+              placeholder="blur"
+              blurDataURL={meta.image + "&w=50"}
+              alt={meta.slug}
+              src={meta.image + "&w=800"}
+              width="800px"
+              height="500px"
+              objectFit="cover"
+            />
+            <MDXRemote components={components} {...content} />
           </div>
         </div>
-        <Image
-          placeholder="blur"
-          blurDataURL={meta.image + "&w=50"}
-          alt={meta.slug}
-          src={meta.image + "&w=800"}
-          width="800px"
-          height="500px"
-          objectFit="cover"
-        />
-        <MDXRemote components={components} {...content} />
       </div>
     </div>
   );
