@@ -1,15 +1,6 @@
 import { MdPlayCircleOutline } from "react-icons/md";
 
 const ProjectTimeline = () => {
-  // const deployClicked = () => {
-  //   const video = document.getElementById("code-video");
-
-  //   video.style.transform = "scale(1.03)";
-  //   setTimeout(() => {
-  //     video.style.transform = "scale(1)";
-  //   }, 400);
-  // };
-
   return (
     <div id="timeline-container">
       <h1 className="workflow-title">Project Workflow</h1>

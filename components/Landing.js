@@ -1,3 +1,4 @@
+import Aos from "aos";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -6,16 +7,21 @@ export default function Landing() {
   const spaceshipRef = useRef();
 
   useEffect(() => {
-    spaceshipRef.current.addEventListener(
+    const spaceship = spaceshipRef.current;
+    spaceship.addEventListener(
       "timeupdate",
       () => {
-        if (spaceshipRef.current.currentTime >= 14) {
-          spaceshipRef.current.currentTime = 2.23;
-          spaceshipRef.current.play();
+        if (spaceship.currentTime >= 14) {
+          spaceship.currentTime = 2.23;
+          spaceship.play();
         }
       },
       false
     );
+
+    return () => {
+      spaceship.removeEventListener("timeupdate", () => {});
+    };
   }, []);
 
   return (
