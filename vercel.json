@@ -1,0 +1,10 @@
+{
+    "redirects": [
+        {
+            "source": "/make",
+            "destination": "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1",
+            "statusCode": 200
+        }
+
+    ]
+}
