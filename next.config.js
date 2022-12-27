@@ -10,7 +10,7 @@ const nextConfig = {
         source: "/make",
         destination:
           "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1",
-        permanent: true,
+        statusCode: 200,
       },
     ];
   },
