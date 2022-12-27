@@ -1,9 +1,8 @@
 {
-    "redirects": [
+    "rewrites": [
         {
             "source": "/make",
-            "destination": "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1",
-            "statusCode": 200
+            "destination": "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1"
         }
 
     ]
