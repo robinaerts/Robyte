@@ -20,9 +20,7 @@ export default function ProjectDetail(props) {
           background: `url(${props.project.preview}) center center/cover no-repeat`,
         }}
       >
-        {props.project.model && (
-          <Spline scene="https://prod.spline.design/NKGDQUw0hrSqyaIN/scene.splinecode" />
-        )}
+        {props.project.model && <Spline scene={props.project.model} />}
       </div>
       <div id="project-details">
         <div id="project-details-text">
