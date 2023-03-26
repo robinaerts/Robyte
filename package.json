@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@splinetool/react-spline": "^2.2.6",
+    "@splinetool/runtime": "^0.9.273",
     "aos": "^2.3.4",
     "firebase": "^9.8.3",
     "gray-matter": "^4.0.3",

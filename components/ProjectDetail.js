@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { auth } from "../helpers/firebaseconfig";
 import AddComment from "./AddComment";
 import Comment from "./Comment";
+import Spline from "@splinetool/react-spline";
 
 export default function ProjectDetail(props) {
   const [user, setUser] = useState();
@@ -19,7 +20,9 @@ export default function ProjectDetail(props) {
           background: `url(${props.project.preview}) center center/cover no-repeat`,
         }}
       >
-        {/* {props.project.glb && <Model model={props.project.glb} />} */}
+        {props.project.model && (
+          <Spline scene="https://prod.spline.design/NKGDQUw0hrSqyaIN/scene.splinecode" />
+        )}
       </div>
       <div id="project-details">
         <div id="project-details-text">
