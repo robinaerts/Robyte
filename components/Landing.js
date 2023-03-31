@@ -55,7 +55,7 @@ export default function Landing() {
           <Link href="#programming-container">
             <button id="landing-primary">My Work</button>
           </Link>
-          <Link href="/store">
+          <Link href="/hire">
             <button id="landing-secondary">Hire Me</button>
           </Link>
         </div>

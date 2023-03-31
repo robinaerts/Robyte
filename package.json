@@ -24,7 +24,8 @@
     "react-icons": "^4.4.0",
     "rehype-autolink-headings": "^6.1.1",
     "rehype-highlight": "^5.0.2",
-    "rehype-slug": "^5.0.1"
+    "rehype-slug": "^5.0.1",
+    "stripe": "^11.16.0"
   },
   "devDependencies": {
     "eslint": "8.18.0",

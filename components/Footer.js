@@ -46,7 +46,7 @@ export default function Footer() {
         </div>
       </div>
       <div id="footerCopyright">
-        <p>© Copyright 2021: Robyte.com </p>
+        <p>© Copyright 2023: Robyte.me </p>
       </div>
     </div>
   );

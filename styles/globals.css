@@ -880,6 +880,15 @@ circle {
     display: none;
   }
 
+  #landing-cta-buttons {
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-github {
+    display: none;
+  }
+
   .landing-robyte {
     font-size: 7rem;
   }
