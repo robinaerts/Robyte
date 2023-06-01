@@ -35,6 +35,7 @@ export default function Tag({ posts }) {
       <Head>
         <title>Blog | {tag}</title>
         <meta name="description" content={`Posts tagged with ${tag}`} />
+      </Head>
         <Script
    id="Adsense-id"
    data-ad-client="ca-pub-5041240051853060"
@@ -42,7 +43,6 @@ export default function Tag({ posts }) {
    strategy="beforeInteractive"
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 />
-      </Head>
       <Nav />
       <div id="tag-container">
         <Link href={"/blog"}>

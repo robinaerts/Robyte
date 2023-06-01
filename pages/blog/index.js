@@ -26,6 +26,7 @@ export default function Blog({ posts }) {
           content="Learn everything about the newest programming tools. Tutorials and articles on a wide variety of subjects"
         />
         <meta name="title" content="Robyte Blog - Tutorials and tech help" />
+      </Head>
         <Script
    id="Adsense-id"
    data-ad-client="ca-pub-5041240051853060"
@@ -33,7 +34,6 @@ export default function Blog({ posts }) {
    strategy="beforeInteractive"
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 />
-      </Head>
       <Nav />
       {size.width >= 830 ? (
         <FirstBlogPostPreview metadata={posts[0]} />

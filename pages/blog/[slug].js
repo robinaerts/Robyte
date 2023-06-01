@@ -57,6 +57,7 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.excerpt} />
         <meta name="twitter:image" content={meta.image + "&w=800"} />
+      </Head>
         <Script
    id="Adsense-id"
    data-ad-client="ca-pub-5041240051853060"
@@ -64,7 +65,6 @@ export default function PostPage({ meta, content }) {
    strategy="beforeInteractive"
     src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
 />
-      </Head>
       <Nav />
       <div>
         <div className="horizontal-container">
