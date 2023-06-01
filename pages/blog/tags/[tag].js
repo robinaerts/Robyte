@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import BlogPostPreview from "../../../components/Blog/BlogPostPreview";
 import Nav from "../../../components/Nav";
 import { getPosts } from "../../../helpers/postApi";
+import Script from "next/script";
 
 const tags = ["flutter", "dev"];
 
@@ -34,6 +35,13 @@ export default function Tag({ posts }) {
       <Head>
         <title>Blog | {tag}</title>
         <meta name="description" content={`Posts tagged with ${tag}`} />
+        <Script
+   id="Adsense-id"
+   data-ad-client="ca-pub-5041240051853060"
+   async="true"
+   strategy="beforeInteractive"
+    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+/>
       </Head>
       <Nav />
       <div id="tag-container">
