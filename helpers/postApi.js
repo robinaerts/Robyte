@@ -36,6 +36,7 @@ export const getPostFromSlug = (slug) => {
       tags: data.tags,
       author: data.author,
       image: data.image,
+      blurImage: data.blurImage,
     },
   };
 };

@@ -6,7 +6,7 @@ import Nav from "../../../components/Nav";
 import { getPosts } from "../../../helpers/postApi";
 import Script from "next/script";
 
-const tags = ["flutter", "dev"];
+const tags = ["flutter", "dev", "hardware", "setup"];
 
 export const getStaticPaths = async () => {
   return {
@@ -30,19 +30,20 @@ export const getStaticProps = ({ params }) => {
 export default function Tag({ posts }) {
   const router = useRouter();
   const { tag } = router.query;
+
   return (
     <>
       <Head>
         <title>Blog | {tag}</title>
         <meta name="description" content={`Posts tagged with ${tag}`} />
       </Head>
-        <Script
-   id="Adsense-id"
-   data-ad-client="ca-pub-5041240051853060"
-   async="true"
-   strategy="beforeInteractive"
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-/>
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-5041240051853060"
+        async="true"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <Nav />
       <div id="tag-container">
         <Link href={"/blog"}>
