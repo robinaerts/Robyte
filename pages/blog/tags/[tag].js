@@ -16,11 +16,18 @@ export const getStaticPaths = async () => {
 };
 
 export const getStaticProps = ({ params }) => {
-  const posts = getPosts().map((post) => {
-    if (post.metadata.tags.includes(params.tag)) {
-      return post.metadata;
-    }
-  });
+  // let posts = [];
+  // getPosts().reduce((post) => {
+  //   if (post.metadata.tags.includes(params.tag)) {
+  //     post.push(post.metadata);
+  //     return post.metadata;
+  //   }
+  // }, []);
+
+  // // Get only the posts that have the tag
+  const posts = getPosts()
+    .filter((post) => post.metadata.tags.includes(params.tag))
+    .map((post) => post.metadata);
 
   return {
     props: { posts },
