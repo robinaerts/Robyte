@@ -1,9 +1,12 @@
 {
-    "rewrites": [
-        {
-            "source": "/make",
-            "destination": "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1"
-        }
-
-    ]
+  "rewrites": [
+    {
+      "source": "/make",
+      "destination": "https://raw.githubusercontent.com/robinaerts/makeproject/main/makeproject.ps1"
+    },
+    {
+      "source": "/macro/mathboard/setup",
+      "destination": "https://raw.githubusercontent.com/robinaerts/mathboard/main/mathboard.ps1"
+    }
+  ]
 }
