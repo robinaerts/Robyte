@@ -8,9 +8,9 @@ export default function FirstBlogPostPreview({ metadata }) {
         <div id="first-blogpost-image">
           <Image
             placeholder="blur"
-            blurDataURL={metadata.image + "&w=50"}
+            blurDataURL={metadata.blurImage + "&w=50"}
             alt={metadata.slug}
-            src={metadata.image + "&w=800"}
+            src={metadata.image}
             layout="fill"
             objectFit="cover"
           />

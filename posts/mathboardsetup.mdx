@@ -1,0 +1,132 @@
+---
+title: How to setup your MathBoard
+tags:
+  - Hardware
+  - Setup
+date: "2023-06-22"
+excerpt: Do you have a MathBoard and you want to set it up? Follow this detailed guide!
+slug: "mathboardsetup"
+blurImage: "https://images.unsplash.com/photo-1658426837321-9e04e1d227ee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop"
+image: "/postAssets/mathboard/cover.webp"
+author: "Robin Aerts"
+---
+
+<br />
+
+<br />
+
+## Step 1: Install the software
+
+There are multiple ways to install the software on your MathBoard. You can either use the <strong>MathBoard installer</strong> or you can install the software manually.
+
+<br />
+### Method 1 (easy)
+
+First open Powershell (type powershell in the search bar).
+
+Then you can copy the following command and paste it in your Powershell window:
+
+```
+irm https://www.robyte.me/macro/mathboard/setup | iex
+```
+
+<br />
+
+If you get an error please run the following command in an Admin Powershell window:
+
+```
+Set-ExecutionPolicy unrestriced
+```
+
+<br />
+
+After that you can <strong>enter number '1'</strong> and press enter to start the installation.
+
+<br />
+
+### Method 2 (manual)
+
+Coming soon!
+
+<br />
+
+## Step 2: Connect your MathBoard
+
+Now you can connect you MathBoard to your computer (don't worry if you already connected it before, you can just leave it connected).
+
+After that press the WINDOWS key + R key and type in the following
+
+<BlogImage
+  src="/postAssets/mathboard/run.webp"
+  alt="Run window"
+  width="400"
+  height="200"
+/>
+
+<br />
+
+Then create a new file <strong>'mathboard.bat'</strong> and paste the following code in it:
+
+(Make sure you change the username to your own username in both lines ex. robin.aerts)
+
+```
+cd 'C:\Users\robin.aerts\AppData\Roaming\Robyte\mathboard\luamacros'
+LuaMacros.exe -r 'C:\Users\robin.aerts\AppData\Roaming\Robyte\mathboard\lua_macro_script.lua'
+```
+
+Then double click on the file to run it. The next time this will automatically run when your pc starts.
+
+<br />
+
+## Step 3: Specificy the keyboard
+
+Now you can specify the keyboard you want to use. You can do this by opening the MathBoard script in the app tray. (little arrow in the bottom right corner -> click the keyboard)
+
+<BlogImage
+  src="/postAssets/mathboard/tray.webp"
+  alt="System Tray"
+  width="268"
+  height="250"
+/>
+
+<br />
+
+At the bottom you now see all the keyboards connected to your pc. If you're using a laptop, you will now see two entries (0 and 1).
+
+Now you have to extract the little keyboard id withing the SystemId field. It's located
+between two & symbols and is between 7 and 8 characters long.
+
+<Hint>Make sure you don't select your laptop keyboard!</Hint>
+
+You can copy this ID, paste it at the top in the keyboardIdentifier variable between the '' and press the Run icon.
+
+<br />
+
+<BlogImage
+  src="/postAssets/mathboard/lua.webp"
+  alt="Keyboard ID + Run icon"
+  width="1000"
+  height="750"
+/>
+
+<br />
+
+Congratulations! Your mathboard is now setup and ready to use!
+
+<br />
+
+# Usage & Common Issues
+
+You can use the keyboard in Microsoft Word.
+
+To start typing an equation press the 'Start' key in the upper left corner.
+
+Now you can use any Math-related key on the keyboard and it will automatically get converted into the desired output.
+
+<br />
+
+## Common Issues
+
+A. If a random letter is typed along your equation, you should restart your computer and everything should work fine.
+
+B. Some keys, like the {} key don't work, this problem is being solved as we speak.

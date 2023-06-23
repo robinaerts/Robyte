@@ -58,13 +58,13 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:description" content={meta.excerpt} />
         <meta name="twitter:image" content={meta.image + "&w=800"} />
       </Head>
-        <Script
-   id="Adsense-id"
-   data-ad-client="ca-pub-5041240051853060"
-   async="true"
-   strategy="beforeInteractive"
-    src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-/>
+      <Script
+        id="Adsense-id"
+        data-ad-client="ca-pub-5041240051853060"
+        async="true"
+        strategy="beforeInteractive"
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
+      />
       <Nav />
       <div>
         <div className="horizontal-container">
@@ -96,9 +96,9 @@ export default function PostPage({ meta, content }) {
             </div>
             <Image
               placeholder="blur"
-              blurDataURL={meta.image + "&w=50"}
+              blurDataURL={meta.blurImage + "&w=50"}
               alt={meta.slug}
-              src={meta.image + "&w=800"}
+              src={meta.image}
               width="800px"
               height="500px"
               objectFit="cover"

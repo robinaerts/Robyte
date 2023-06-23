@@ -5,18 +5,15 @@ export default function BlogPostPreview({ metadata }) {
   return (
     <Link href={`/blog/${metadata.slug}`}>
       <div className="blogpost-preview-container">
-        <div
-          className="blogpost-preview-image"
-
-        >
+        <div className="blogpost-preview-image">
           <Image
-        placeholder="blur"
-        blurDataURL={metadata.image + "&w=50"}
-          alt={metadata.slug}
-          src={metadata.image + "&w=800"}
-          layout="fill"
-          objectFit="cover"
-        />
+            placeholder="blur"
+            blurDataURL={metadata.blurImage + "&w=50"}
+            alt={metadata.slug}
+            src={metadata.image}
+            layout="fill"
+            objectFit="cover"
+          />
         </div>
         <div className="main-content-preview">
           <h1>{metadata.title}</h1>
