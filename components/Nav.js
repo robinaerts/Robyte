@@ -31,7 +31,7 @@ export default function Nav() {
         </Link>
       </li>
       <li className="nav-item">
-        <Link href={"/hire"}>
+        <Link href={"/store"}>
           <a className="nav-link">Store</a>
         </Link>
       </li>

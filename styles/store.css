@@ -28,6 +28,7 @@
     text-align: center;
     background-color: #191919;
     border-radius: 10px;
+    width: 25rem;
 }
 
 .product-section-cta {
@@ -295,7 +296,7 @@
     justify-content: space-between;
     align-items: center;
     font-size: 1.1rem;
-    padding: 0.5rem 2rem;
+    margin-left: 1rem;
 }
 
 .product-tag {
@@ -309,6 +310,7 @@
 }
 
 .product-icon {
+    color: white;
     fill: white;
     width: 20px;
     height: 20px;
