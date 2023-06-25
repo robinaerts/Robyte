@@ -1,13 +1,16 @@
+import {BsKeyboard} from "react-icons/bs"
+
 export default function StoreProduct({ product }) {
     return (
         <div className="store-product">
-            <div>
-                <h3><span>icon</span>{product.title}</h3>
-                <button>{product.tag}</button>
+            <div className="product-header">
+                <h3 className="product-title"><BsKeyboard className="product-icon"/>{product.title}</h3>
+                <button className="product-tag">{product.tag}</button>
             </div>
-            <p>{product.description}</p>
+            <p className="product-description">{product.description}</p>
             <div>
-                {product.price !== 0 ? <button>{product.price}</button> : <button>Launch</button>}
+                {product.price !== 0 ? <button className="store-product-cta">€{product.price}</button> : <button className="store-product-cta">Launch</button>}
+                <button className="store-product-more">More Info</button>
             </div>
         </div>
 

@@ -4,7 +4,7 @@ import { collection, getDocs, query, where } from "firebase/firestore";
 import StoreProduct from "../../components/Store/StoreProducts";
 
 export default function Store() {
-    const [selectedSection, setSelectedSection] = useState(2);
+    const [selectedSection, setSelectedSection] = useState(0);
     const [products, setProducts] = useState([]);
     const sections = ["All Products", "Hardware", "Services", "Digital Art"]
 
@@ -45,7 +45,7 @@ export default function Store() {
                 </ul>
                 <div id="store-searchbox">
                     <input id="store-search" type="text" placeholder="Search..."/>
-                    <span>CTRL + K</span>
+                    {/* <span id="store-ctrlk">CTRL + K</span> */}
                 </div>
             </div>
             <div id="store-filters">

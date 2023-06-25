@@ -1,7 +1,7 @@
 import Nav from "../../components/Nav";
 import Head from "next/head";
 import { FaAppStore, FaGlobe, FaMobileAlt } from "react-icons/fa";
-import { BsFillGearFill, BSFillGearFill } from "react-icons/bs";
+import { BsFillGearFill } from "react-icons/bs";
 import { FiHelpCircle } from "react-icons/fi";
 import Link from "next/link";
 

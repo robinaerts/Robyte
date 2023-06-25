@@ -25,7 +25,6 @@
 }
 
 .store-product {
-    width: 30rem;
     text-align: center;
     background-color: #191919;
     border-radius: 10px;
@@ -174,4 +173,160 @@
     align-self: flex-start;
     margin-left: 5rem;
     justify-self: center;
+}
+
+
+/* Actual Store */
+
+#store-page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem 2rem;
+    min-height: 100vh;
+    width: 100vw;
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #2B282F 0%, #131313 100%);;
+}
+
+#store-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+#store-sections {
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    width: 100%;
+}
+
+#store-section {
+    color: #6D6D6D;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#store-section:hover {
+    color: #CFCFCF;
+}
+
+#store-section-selected {
+    background: #4F4565;
+    color: #9C9C9C;
+    border-radius: 50px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+#store-searchbox {
+    position: relative;
+    margin-right: 1rem;
+}
+
+#store-search {
+    background: #33303A;
+    color: #9C9C9C;
+    border-radius: 10px;
+    font-weight: 600;
+    outline: none;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-right: 10rem;
+    width: 190px;
+}
+
+#store-ctrlk {
+    font-size: 10px;
+    color: #9C9C9C;
+    font-weight: 600;
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 9px;
+}
+
+#store-filters {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    color: #9C9C9C;
+    align-self: flex-start;
+    margin: 3rem;
+}
+
+#store-products {
+    display: flex;
+    align-self: flex-start;
+    margin-left: 3rem;
+}
+
+.store-product {
+    background-color: #33303A;
+    padding: 1rem;
+    text-align: left;
+}
+
+.store-product-cta {
+    background-color: #4F4565;
+    outline: none;
+    border: none;
+    color: #D6D6D6;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    margin: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.store-product-more {
+    border: none;
+    background: none;
+    outline: none;
+    color: #aaaaaa;
+    margin-left: 1rem;
+}
+
+.product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.1rem;
+    padding: 0.5rem 2rem;
+}
+
+.product-tag {
+    border-radius: 50px;
+    color: #33303A;
+    outline: none;
+    border: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    font-size: 10px;
+}
+
+.product-icon {
+    fill: white;
+    width: 20px;
+    height: 20px;
+    margin-right: 2rem;;
+}
+
+.product-title {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: #D6D6D6;
+    display: flex;
+    align-items: center;
+    margin-right: 3rem;;
+}
+
+.product-description {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    color: #d7d7d7;
+    margin-left: 1rem;
 }
