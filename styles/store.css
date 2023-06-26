@@ -22,6 +22,7 @@
     justify-content: flex-start;
     gap: 8rem;
     margin-bottom: 4rem;
+    overflow: visible;
 }
 
 .store-product {
@@ -29,6 +30,11 @@
     background-color: #191919;
     border-radius: 10px;
     width: 25rem;
+    transition: 100ms all ease-in-out;
+}
+
+.store-product:hover {
+    transform: scale(1.02);
 }
 
 .product-section-cta {
@@ -179,14 +185,19 @@
 
 /* Actual Store */
 
+#store-bg {
+    background: radial-gradient(50% 50.00% at 50% 50.00%, #2B282F 0%, #131313 100%);;
+    display: flex;
+    justify-content: center;
+}
+
 #store-page-container {
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem 2rem;
     min-height: 100vh;
-    width: 100vw;
-    background: radial-gradient(50% 50.00% at 50% 50.00%, #2B282F 0%, #131313 100%);;
+    width: 90vw;
 }
 
 #store-header {
@@ -262,7 +273,9 @@
 #store-products {
     display: flex;
     align-self: flex-start;
+    gap: 3rem;
     margin-left: 3rem;
+    overflow: visible;
 }
 
 .store-product {
@@ -281,6 +294,16 @@
     margin: 1rem;
     font-weight: 500;
     cursor: pointer;
+    transition: transform 100ms;
+}
+
+.store-product-cta:hover {
+    background-color: #5f5378;
+}
+
+.store-product-cta:active {
+    background-color: #4F4565;
+    transform: scale(0.95);
 }
 
 .store-product-more {
@@ -289,6 +312,11 @@
     outline: none;
     color: #aaaaaa;
     margin-left: 1rem;
+    cursor: pointer;
+}
+
+.store-product-more:hover {
+    color: #CFCFCF;
 }
 
 .product-header {
@@ -307,6 +335,13 @@
     font-weight: 600;
     padding: 0.5rem 1rem;
     font-size: 10px;
+    cursor: pointer;
+    transition: all 100ms;
+}
+
+.product-tag:hover {
+    filter: brightness(120%);
+    color: #363636;
 }
 
 .product-icon {
