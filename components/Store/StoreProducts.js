@@ -30,7 +30,7 @@ export default function StoreProduct({ product }) {
             </button>
           </Link>
         ) : (
-          <a target="_blank" href={product.cta}>
+          <a rel="noreferrer" target="_blank" href={product.cta}>
             <button className="store-product-cta">
               <FiExternalLink style={{ marginRight: "0.8rem" }} />
               Launch
