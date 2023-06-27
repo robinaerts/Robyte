@@ -24,7 +24,7 @@ export default function StoreProduct({ product }) {
       <p className="product-description">{product.description}</p>
       <div>
         {product.price !== 0 ? (
-          <Link href={product.cta}>
+          <Link href={"/store/" + product.id}>
             <button className="store-product-cta">
               <BsCart2 style={{ marginRight: "0.3rem" }} /> €{product.price}
             </button>
@@ -37,7 +37,9 @@ export default function StoreProduct({ product }) {
             </button>
           </a>
         )}
-        <button className="store-product-more">More Info</button>
+        <Link href={"/store/" + product.id}>
+          <button className="store-product-more">More Info</button>
+        </Link>
       </div>
     </div>
   );
