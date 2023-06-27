@@ -108,8 +108,8 @@ export default function Store() {
         </div>
         <div id="store-filters">
           <svg
-            width="15"
-            height="10"
+            width="20"
+            height="15"
             viewBox="0 0 15 10"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -120,8 +120,8 @@ export default function Store() {
           </svg>
           <p>Popular</p>
           <svg
-            width="9"
-            height="10"
+            width="14"
+            height="15"
             viewBox="0 0 9 10"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
