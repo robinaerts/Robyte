@@ -10,7 +10,7 @@ const Stats = () => {
       </div>
       <div className="statistic">
         <BiGitCommit className="stat-icon" />
-        <span className="stats-number">300+</span>
+        <span className="stats-number">400+</span>
         <p>Contributions on Github in the last year</p>
       </div>
       <div className="statistic">
