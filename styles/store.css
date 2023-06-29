@@ -385,6 +385,8 @@ min-height: 100vh;
 
 #product-details-container {
     display: flex;
+    flex-direction: column;
+    gap: 10rem;
     margin: 10rem auto;
     width: 86vw;
 }
@@ -442,6 +444,43 @@ min-height: 100vh;
     padding: 0.5rem 1.6rem;
     cursor: pointer;
 }
+
+#product-image {
+    border-radius: 15px;
+    width: 810px;
+    padding: 0;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+}
+
+
+#product-details-technical {
+    position: fixed;
+    border-left: 2px solid rgb(57, 57, 57);
+    right: 10rem;
+    bottom: 10rem;
+    padding-left: 5rem;
+}
+
+#product-details-technical-icons {
+    display: flex;
+    gap: 1rem;
+}
+
+.product-technical-title {
+    color: rgb(229, 229, 229);
+    font-size: 1.3rem;
+    padding-bottom: 0.7rem;
+    margin-top: 4rem;
+}
+
+#product-details-technical-contributors {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    color: #c2c2c2;
+    font-size: 1.2rem;
+}
+
 
 @media only screen and (max-width: 900px) {
     #store-header {

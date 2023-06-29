@@ -35,13 +35,10 @@ export const getServerSideProps = async ({ res }) => {
     BASE_URL + "/art",
     BASE_URL + "/login",
     BASE_URL + "/store",
-    BASE_URL + "/store/web",
-    BASE_URL + "/store/mobile",
+    BASE_URL + "/store",
     BASE_URL + "/blog",
     BASE_URL + "/blog/fluttergetstarted",
-    BASE_URL + "/blog/tags",
-    BASE_URL + "/blog/tags/flutter",
-    BASE_URL + "/blog/tags/dev",
+    BASE_URL + "/blog/mathboardsetup",
   ];
 
   const allPaths = [...staticPaths, ...dynamicProjects];
