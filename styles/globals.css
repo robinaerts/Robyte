@@ -140,21 +140,21 @@ a {
 }
 
 #landing-primary {
-  background-color: #879CCC;
-  border: none;
+  color: #191919;
+  background-color: #8F9CB5;
+  font-weight: bold;  border: none;
   outline: none;
-  color:white;
   font-weight: bold;
   padding: 1rem 2rem;
   border-radius: 3px;
   font-size: 1.5rem;
   margin-left: 3px;
-  transition: 100ms all;
+  transition: 100ms all ease-in-out;
 }
 
 #landing-secondary {
-  color: #879CCC;
-  border: 2px solid #879CCC;
+  color: #8F9CB5;
+  border: 2px solid #8F9CB5;
   font-weight: bold;
   background: none;
   outline: none;
@@ -166,10 +166,10 @@ a {
 }
 
 #landing-primary:hover {
-  background-color: #7282aa;
-  color: white;
+  background-color: #8f92b5;
+  color: black;
   cursor: pointer;
-  transform: scale(1.05);
+  transform: scale(1.03);
 }
 
 #landing-secondary:hover {
