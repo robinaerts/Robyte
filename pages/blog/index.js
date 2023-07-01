@@ -28,7 +28,7 @@ export default function Blog({ posts }) {
         <meta name="title" content="Robyte Blog - Tutorials and tech help" />
 
         {typeof window !== 'undefined' && <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5041240051853060"
-     crossorigin="anonymous"></script>}
+     crossOrigin="anonymous"></script>}
 
       </Head>
       <Nav />

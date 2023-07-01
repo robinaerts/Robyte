@@ -59,7 +59,7 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:image" content={meta.image + "&w=800"} />
 
         {typeof window !== 'undefined' && <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5041240051853060"
-     crossorigin="anonymous"></script>}
+     crossOrigin="anonymous"></script>}
       </Head>
       <Nav />
       <div>
