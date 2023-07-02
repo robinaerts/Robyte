@@ -106,7 +106,7 @@ export default function ProductDetails() {
                       height={450}
                       src={
                         "/products/" +
-                        product.title.toLowerCase() +
+                        product.title.toLowerCase().replace(" ", "") +
                         "/cover.webp"
                       }
                     />
@@ -115,20 +115,25 @@ export default function ProductDetails() {
               )}
             </div>
             <div id="product-details-technical">
-              <h3 className="product-technical-title">Build With</h3>
               {product.buildwith && (
+                <>
+              <h3 className="product-technical-title">Build With</h3>
                 <div id="product-details-technical-icons"> 
                   {product.buildwith.map((item) => (
                     <Image width={40} height={40} key={item} src={"/icons/" + item + ".svg"} alt={item} />
-                  ))}
-              </div>)}
-              <h3 className="product-technical-title">Contributors</h3>
+                    ))}
+              </div>
+                    </>
+              )}
               {product.contributors && (
+                <>
+              <h3 className="product-technical-title">Contributors</h3>
                 <div id="product-details-technical-contributors"> 
                   {product.contributors.map((item) => (
                     <p key={item}>{item}</p>
                   ))}
-              </div>)}
+              </div>
+              </>)}
               {product.code && (
                 <div>
                 <h3 className="product-technical-title">Source Code</h3>

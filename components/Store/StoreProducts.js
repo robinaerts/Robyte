@@ -6,7 +6,9 @@ export default function StoreProduct({ product }) {
   const tagColors = {
     Hardware: "#BF5858",
     Apps: "#efba13",
+    Assets: "#77dd77"
   };
+  
 
   return (
     <div className="store-product">

@@ -13,7 +13,7 @@ export default function Store() {
     "All Products",
     "Hardware",
     "Services",
-    "Digital Art",
+    "Assets",
     "Apps",
   ];
 
@@ -26,7 +26,7 @@ export default function Store() {
         setSelectedSection(1);
       } else if (tag.toLowerCase() === "services") {
         setSelectedSection(2);
-      } else if (tag.toLowerCase() === "digitalart") {
+      } else if (tag.toLowerCase() === "assets") {
         setSelectedSection(3);
       } else if (tag.toLowerCase() === "apps") {
         setSelectedSection(4);
@@ -99,10 +99,10 @@ export default function Store() {
                 </li>
               )}
               {selectedSection === 3 ? (
-                <li id="store-section-selected">Digital Art</li>
+                <li id="store-section-selected">Assets</li>
               ) : (
                 <li id="store-section" onClick={() => setSelectedSection(3)}>
-                  Digital Art
+                  Assets
                 </li>
               )}
               {selectedSection === 4 ? (
