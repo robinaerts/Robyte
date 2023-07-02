@@ -57,14 +57,10 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:title" content={meta.title} />
         <meta name="twitter:description" content={meta.excerpt} />
         <meta name="twitter:image" content={meta.image + "&w=800"} />
+
+        {typeof window !== 'undefined' && <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5041240051853060"
+     crossOrigin="anonymous"></script>}
       </Head>
-      <Script
-        id="Adsense-id"
-        data-ad-client="ca-pub-5041240051853060"
-        async="true"
-        strategy="beforeInteractive"
-        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"
-      />
       <Nav />
       <div>
         <div className="horizontal-container">
