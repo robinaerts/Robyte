@@ -9,7 +9,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  background: #242424;
+  background: rgb(36,36,32);
+  background: linear-gradient(180deg, rgba(36,36,32,1) 9%, rgb(28 28 69) 60%, rgb(16 16 24) 100%);
   scroll-behavior: smooth;
   overflow-x: hidden;
   scrollbar-width: thin;
@@ -53,7 +54,7 @@ a {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: #161616;
+  background: #0d0a0f;
 
 }
 
@@ -637,11 +638,12 @@ circle {
 }
 
 #skills-container {
-  background-color: #1B1B1B;
-  margin-top: 5rem;
+  background-color: #0b080f;
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  padding: 5rem 0;
 }
 
 .skill-category {
@@ -739,7 +741,6 @@ circle {
 
 #footerContainer {
   margin: 0;
-  margin-top: 8vh;
   padding: 0;
   width: 100vw;
   background-color: #2b2b2b;
