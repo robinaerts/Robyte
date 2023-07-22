@@ -332,6 +332,7 @@ circle {
  text-align: center;
  color: rgb(202, 202, 202);
  font-size: 1.8rem;
+ z-index: 2;
 }
 
 .stat-icon {
