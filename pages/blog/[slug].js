@@ -11,7 +11,6 @@ import Image from "next/image";
 import BlogImage from "../../components/Blog/BlogImage";
 import Hint from "../../components/Blog/Hint";
 import Head from "next/head";
-import Script from "next/script";
 
 const components = {
   BlogImage,
@@ -27,6 +26,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({ params }) => {
   const { slug } = params;
+
   const { content, metadata } = getPostFromSlug(slug);
   const mdx = await serialize(content, {
     mdxOptions: {
@@ -58,8 +58,13 @@ export default function PostPage({ meta, content }) {
         <meta name="twitter:description" content={meta.excerpt} />
         <meta name="twitter:image" content={meta.image + "&w=800"} />
 
-        {typeof window !== 'undefined' && <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5041240051853060"
-     crossOrigin="anonymous"></script>}
+        {typeof window !== "undefined" && (
+          <script
+            async
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5041240051853060"
+            crossOrigin="anonymous"
+          ></script>
+        )}
       </Head>
       <Nav />
       <div>
