@@ -6,6 +6,16 @@ import { useRef } from "react";
 export default function Landing() {
   const spaceshipRef = useRef();
 
+  const startComet = () => {
+    const comet = document.getElementById("comet");
+    comet.style.animationPlayState = "running";
+  };
+
+  const stopComet = () => {
+    const comet = document.getElementById("comet");
+    comet.style.animationPlayState = "paused";
+  };
+
   useEffect(() => {
     const spaceship = spaceshipRef.current;
     spaceship.addEventListener(
@@ -18,6 +28,31 @@ export default function Landing() {
       },
       false
     );
+
+    const comet = document.getElementById("comet");
+    comet.style.animationPlayState = "paused";
+
+    const unique = document.getElementById("landing-unique");
+    unique.addEventListener("mouseover", startComet);
+    unique.addEventListener("touchstart", startComet);
+    unique.addEventListener("mouseout", stopComet);
+    unique.addEventListener("touchend", stopComet);
+
+    spaceship.style.animationPlayState = "paused";
+
+    const creative = document.getElementById("creative");
+    creative.addEventListener("mouseover", () => {
+      spaceship.style.animationPlayState = "running";
+    });
+    creative.addEventListener("touchstart", () => {
+      spaceship.style.animationPlayState = "running";
+    });
+    creative.addEventListener("mouseout", () => {
+      spaceship.style.animationPlayState = "paused";
+    });
+    creative.addEventListener("touchend", () => {
+      spaceship.style.animationPlayState = "paused";
+    });
 
     return () => {
       spaceship.removeEventListener("timeupdate", () => {});
@@ -46,8 +81,16 @@ export default function Landing() {
           </h1>
           <p id="landing-subtext">
             I design{" "}
-            <b className="lighter-yellow-text landing-keyword">unique</b> and{" "}
-            <b className="lighter-yellow-text landing-keyword">creative</b>{" "}
+            <b
+              id="landing-unique"
+              className="lighter-yellow-text landing-keyword"
+            >
+              unique
+            </b>{" "}
+            and{" "}
+            <b id="creative" className="lighter-yellow-text landing-keyword">
+              creative
+            </b>{" "}
             solutions to remove your discomforts and problems
           </p>
         </div>
@@ -59,36 +102,9 @@ export default function Landing() {
             <button id="landing-secondary">Store</button>
           </Link>
         </div>
-        {/* <ul id="nav-badges">
-          <a
-            href="#programming-container"
-            className="nav-badge"
-            style={{ backgroundColor: "#8CA3BF" }}
-          >
-            DEV
-          </a>
-          <a
-            href="#art-container"
-            className="nav-badge"
-            style={{ backgroundColor: "#97C490" }}
-          >
-            ART
-          </a>
-          <a
-            href="#about-container"
-            className="nav-badge bigscreen"
-            style={{ backgroundColor: "#EFBA13" }}
-          >
-            ABOUT
-          </a>
-          <a
-            href="#contact-container"
-            className="nav-badge bigscreen"
-            style={{ backgroundColor: "#E64747" }}
-          >
-            CONTACT
-          </a>
-        </ul> */}
+        <img className="asteroid asteroid1" src="/asteroid1.svg" />
+        <img className="asteroid asteroid2" src="/asteroid2.svg" />
+
         <svg
           id="scroll-icon"
           version="1.1"
@@ -105,6 +121,7 @@ export default function Landing() {
         </svg>
       </div>
       <img alt="moon" src="/moon.png" id="landing-moon" />
+      <img id="comet" src="/comet.svg" />
     </div>
   );
 }

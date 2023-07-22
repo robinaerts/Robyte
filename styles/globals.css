@@ -65,7 +65,23 @@ a {
   bottom: -5rem;
   opacity: 60%;
   z-index: 1;
+  transform: translateX(0);
   mix-blend-mode: lighten;
+  animation: spaceshipoutin 2s ease-in-out infinite;
+}
+
+@keyframes spaceshipoutin {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(-200vw);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 @keyframes robytetext {
@@ -87,7 +103,7 @@ a {
   position: absolute;
   top: 70%;
   left: -10rem;
-  z-index: 0;
+  z-index: 1;
 }
 
 .landing-robyte {
@@ -112,6 +128,16 @@ a {
 
 .lighter-yellow-text {
   color: #f9f7a4;
+}
+
+#landing-unique, #creative {
+  transition: 100ms all;
+}
+
+#landing-unique:hover, #creative:hover {
+  cursor: pointer;
+  font-size: xx-large;
+  text-decoration: underline;
 }
 
 @keyframes undertext {
@@ -236,6 +262,66 @@ circle {
     cy: 231;
   }
 }
+
+
+.asteroid {
+  position: absolute;
+  z-index: -1;
+}
+
+.asteroid1 {
+  width: 20rem;
+  top: 20vh;
+  left: 3vw;
+  animation: asteroid 12s ease-in-out infinite;
+}
+
+.asteroid2 {
+  width: 6rem;
+  top: 60vh;
+  left: 15vw;
+  animation: asteroid 8s ease-in-out infinite;
+}
+
+#comet {
+  position: absolute;
+  z-index: 0;
+  width: 10rem;
+  top: 5vh;
+  left: 0;
+  opacity: 1;
+  animation: comet 1s linear infinite;
+}
+
+@keyframes comet {
+  0% {
+    transform: translate(0, 0);
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translate(30vw, 90vh);
+  }
+}
+
+@keyframes asteroid {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(1vw, 7vh) rotate(10deg);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
 
 /* STATS */
 #stats-container {
