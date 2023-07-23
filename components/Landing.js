@@ -39,6 +39,7 @@ export default function Landing() {
     unique.addEventListener("touchend", stopComet);
 
     spaceship.style.animationPlayState = "paused";
+    spaceship.style.transform = "translateX(0)"
 
     const creative = document.getElementById("creative");
     creative.addEventListener("mouseover", () => {
