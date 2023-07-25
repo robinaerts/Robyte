@@ -67,7 +67,7 @@ a {
   z-index: 1;
   transform: translateX(0);
   mix-blend-mode: lighten;
-  animation: spaceshipoutin 2s ease-in-out infinite;
+  /* animation: spaceshipoutin 2s ease-in-out infinite; */
 }
 
 @keyframes spaceshipoutin {
@@ -280,7 +280,7 @@ circle {
   width: 6rem;
   top: 60vh;
   left: 15vw;
-  animation: asteroid 8s ease-in-out infinite reverse;
+  animation: asteroid 8s ease-in-out infinite;
 }
 
 .asteroid3 {
@@ -296,7 +296,7 @@ circle {
   width: 8rem;
   top: 110vh;
   right: 20vw;
-  animation: asteroid 14s ease-in-out infinite reverse;
+  animation: asteroid 14s ease-in-out infinite;
 }
 
 #comet {
