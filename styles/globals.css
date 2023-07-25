@@ -797,7 +797,7 @@ circle {
 #contact-form-container {
   display: flex;
   justify-content: center;
-  gap: 20rem;
+  gap: 10rem;
   margin: 2rem auto;
 }
 
@@ -832,11 +832,24 @@ circle {
   background: #efba13;
   border: none;
   font-weight: bold;
+  margin-bottom: 3rem;
 }
 
 #contact-submit:hover {
   cursor: pointer;
   background-color: #d0a20c;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-icon {
+  color: rgb(233, 233, 233);
+  font-size: 3rem;
 }
 
 /* FOOTER */
@@ -1171,9 +1184,19 @@ circle {
 
   #contact-form-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
+    gap: 5rem;
+  }
+
+  #contact-submit {
+    margin-bottom: 0;
+  }
+
+  #socials-container {
+    flex-direction: row;
   }
 
   #contact-form {

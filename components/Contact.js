@@ -1,3 +1,10 @@
+import {
+  AiFillLinkedin,
+  AiFillInstagram,
+  AiFillYoutube,
+  AiFillTwitterCircle,
+} from "react-icons/ai";
+
 export default function Contact() {
   return (
     <div id="contact-container">
@@ -51,6 +58,36 @@ export default function Contact() {
           ></textarea>
           <input readOnly id="contact-submit" type="SUBMIT" value="Send" />
         </form>
+        <div id="socials-container">
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.linkedin.com/in/robinaerts0/"
+          >
+            <AiFillLinkedin className="social-icon" />
+          </a>
+          {/* <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.instagram.com/robyte.me/"
+          >
+            <AiFillInstagram className="social-icon" />
+          </a> */}
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.youtube.com/@robyte"
+          >
+            <AiFillYoutube className="social-icon" />
+          </a>
+          <a
+            rel="noreferrer"
+            target="_blank"
+            href="https://www.twitter.com/robinaerts0"
+          >
+            <AiFillTwitterCircle className="social-icon" />
+          </a>
+        </div>
         {/* <video
           // autoPlay
           muted
