@@ -34,7 +34,7 @@ function Programming({ projects }) {
               +
             </button>
           )}
-          <h1 className="section-title">Programming Projects</h1>
+          <h1 className="section-title">Development Projects</h1>
         </div>
         <p className="section-title-description">
           I design and build software for multiple platforms
