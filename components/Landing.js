@@ -1,4 +1,3 @@
-import Aos from "aos";
 import Link from "next/link";
 import { useEffect } from "react";
 import { useRef } from "react";
@@ -39,7 +38,7 @@ export default function Landing() {
     unique.addEventListener("touchend", stopComet);
 
     spaceship.style.animationPlayState = "paused";
-    spaceship.style.transform = "translateX(0)"
+    spaceship.style.transform = "translateX(0)";
 
     const creative = document.getElementById("creative");
     creative.addEventListener("mouseover", () => {

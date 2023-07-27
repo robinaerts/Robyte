@@ -6,58 +6,22 @@ import Nav from "../../components/Nav";
 import { useRouter } from "next/router";
 import Head from "next/head";
 
-export default function Store() {
+export async function getStaticProps() {
+  const products = [];
+  const productsSnapshot = await getDocs(collection(db, "store"));
+  productsSnapshot.docs.forEach((doc) => {
+    products.push(doc.data());
+  });
+  return {
+    props: {
+      products,
+    },
+  };
+}
+
+export default function Store({ products }) {
   const [selectedSection, setSelectedSection] = useState(0);
-  const [products, setProducts] = useState([]);
-  const sections = [
-    "All Products",
-    "Hardware",
-    "Services",
-    "Assets",
-    "Apps",
-  ];
-
-  const router = useRouter();
-  const { tag } = router.query;
-
-  useEffect(() => {
-    if (tag !== undefined) {
-      if (tag.toLowerCase() === "hardware") {
-        setSelectedSection(1);
-      } else if (tag.toLowerCase() === "services") {
-        setSelectedSection(2);
-      } else if (tag.toLowerCase() === "assets") {
-        setSelectedSection(3);
-      } else if (tag.toLowerCase() === "apps") {
-        setSelectedSection(4);
-      }
-    }
-  }, [tag]);
-
-  useEffect(() => {
-    if (selectedSection !== 0) {
-      getDocs(
-        query(
-          collection(db, "store"),
-          where("tag", "==", sections[selectedSection])
-        )
-      ).then((querySnapshot) => {
-        let products = [];
-        querySnapshot.forEach((doc) => {
-          products.push(doc.data());
-        });
-        setProducts(products);
-      });
-    } else {
-      getDocs(collection(db, "store")).then((querySnapshot) => {
-        let products = [];
-        querySnapshot.forEach((doc) => {
-          products.push(doc.data());
-        });
-        setProducts(products);
-      });
-    }
-  }, [selectedSection]);
+  const sections = ["All Products", "Hardware", "Services", "Assets", "Apps"];
 
   return (
     <>
@@ -146,7 +110,12 @@ export default function Store() {
           </div>
           <div id="store-products">
             {products.map((product, index) => {
-              return <StoreProduct key={index} product={product} />;
+              if (
+                selectedSection == 0 ||
+                product.tag == sections[selectedSection]
+              ) {
+                return <StoreProduct key={index} product={product} />;
+              }
             })}
           </div>
         </div>

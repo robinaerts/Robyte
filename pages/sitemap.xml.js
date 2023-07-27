@@ -1,5 +1,7 @@
 // import * as fs from "fs";
-import ids from "../data/projectIds.json";
+
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../helpers/firebaseconfig";
 
 const Sitemap = () => {
   return null;
@@ -8,10 +10,16 @@ const Sitemap = () => {
 export const getServerSideProps = async ({ res }) => {
   const BASE_URL = "https://www.robyte.me";
 
-  const projectPaths = JSON.parse(JSON.stringify(ids))[0];
+  const dynamicPaths = [];
+  const projects = await getDocs(collection(db, "programming"));
+  projects.docs.forEach((project) => {
+    dynamicPaths.push(`${BASE_URL}/dev/${project.data().id}`);
+  });
 
-  const dynamicProjects = projectPaths.id.map((id) => {
-    return `${BASE_URL}/project/${id.params.id}`;
+  const dynamicProducts = [];
+  const products = await getDocs(collection(db, "store"));
+  projects.docs.forEach((project) => {
+    dynamicPaths.push(`${BASE_URL}/store/${project.data().id}`);
   });
 
   // const dynamicBlogPosts = blogPaths.id.map((id) => {
@@ -33,15 +41,15 @@ export const getServerSideProps = async ({ res }) => {
   const staticPaths = [
     BASE_URL + "/",
     BASE_URL + "/art",
+    BASE_URL + "/dev",
     BASE_URL + "/login",
-    BASE_URL + "/store",
     BASE_URL + "/store",
     BASE_URL + "/blog",
     BASE_URL + "/blog/fluttergetstarted",
     BASE_URL + "/blog/mathboardsetup",
   ];
 
-  const allPaths = [...staticPaths, ...dynamicProjects];
+  const allPaths = [...staticPaths, ...dynamicPaths];
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
