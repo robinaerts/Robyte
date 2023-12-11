@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Stappie | Privacy Policy</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+  </head>
+  <body>
+    <div class="page">
+      <div class="header">
+        <div class="container">
+          <p class="title">Privacy Policy for Stappie</p>
+        </div>
+      </div>
+      <div class="translations-content-container">
+        <div class="container">
+          <div class="tab-content translations-content-item en visible" id="en">
+            <h1>Privacy Policy</h1>
+            <p>Last updated: December 11, 2023</p>
+            <p>
+              This Privacy Policy describes Our policies and procedures on the
+              collection, use and disclosure of Your information when You use
+              the Service and tells You about Your privacy rights and how the
+              law protects You.
+            </p>
+            <p>
+              We use Your Personal data to provide and improve the Service. By
+              using the Service, You agree to the collection and use of
+              information in accordance with this Privacy Policy.
+            </p>
+            <h1>Collecting and Using Your Personal Data</h1>
+            <h2>Types of Data Collected</h2>
+            We do not collect any personal data.
+            
+            <h2>Delete Your Personal Data</h2>
+            Any data is only stored locally for calculations and will be removed when you uninstall the application.
+            
+            <h1>Changes to this Privacy Policy</h1>
+            <p>
+              We may update Our Privacy Policy from time to time. We will notify
+              You of any changes by posting the new Privacy Policy on this page.
+            </p>
+            <p>
+              We will let You know via email and/or a prominent notice on Our
+              Service, prior to the change becoming effective and update the
+              "Last updated" date at the top of this Privacy Policy.
+            </p>
+            <p>
+              You are advised to review this Privacy Policy periodically for any
+              changes. Changes to this Privacy Policy are effective when they
+              are posted on this page.
+            </p>
+            <h1>Contact Us</h1>
+            <p>
+              If you have any questions about this Privacy Policy, You can
+              contact us:
+            </p>
+            <ul>
+              <li>By email: nibor.aerts@gmail.com</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
