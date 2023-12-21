@@ -8,7 +8,7 @@ const Sitemap = () => {
 };
 
 export const getServerSideProps = async ({ res }) => {
-  const BASE_URL = "https://www.robyte.me";
+  const BASE_URL = "https://robinaerts.be";
 
   const dynamicPaths = [];
   const projects = await getDocs(collection(db, "programming"));
