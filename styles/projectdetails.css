@@ -133,3 +133,44 @@
   border-radius: 50px;
   width: 100%;
 }
+
+
+/* APP DETAIL */
+.app-details {
+  height: 100vh;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 5rem;
+}
+
+.app-details-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.app-details-header h1 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+.app-details-description {
+  margin-bottom: 30px;
+}
+
+.app-details-screenshots {
+  /* Style for screenshots section */
+}
+
+.app-details-reviews {
+  /* Style for reviews section */
+}
+
+.data-deletion-input {
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  outline: none;
+  margin-left: 2rem;
+  margin-right: 3rem;
+}
