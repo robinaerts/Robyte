@@ -21,9 +21,9 @@ export default function MovieFinderInfo() {
       <Nav />
       <div className="app-details">
         <div className="app-details-header">
-          <h1>MovieFinder</h1>
-          <p>Version: 1.0.0</p>
+          <h1>Data Deletion Form</h1>
         </div>
+
         {/* <div className="app-details-description">
           <p>Description of the app goes here...</p>
         </div> */}
@@ -37,6 +37,17 @@ export default function MovieFinderInfo() {
         <div className="delete-form">
           <h2>Data Deletion Form</h2>
           <form action="https://formspree.io/f/xjvnarwp" method="post">
+            <label htmlFor="product">Select a product:</label>
+            <select name="product" id="reason">
+              <option value="">Select a product</option>
+              <option value="gotcha">Gotcha!</option>
+              <option value="moviefinder">MovieFinder</option>
+              <option value="biblio">Biblio</option>
+              <option value="readit">ReadIt</option>
+              <option value="shortgen">ShortGen</option>
+              <option value="familyplanner">FamilyPlanner</option>
+              <option value="other">Other</option>
+            </select>
             <label htmlFor="email">Email Address:</label>
             <input
               className="data-deletion-input"
